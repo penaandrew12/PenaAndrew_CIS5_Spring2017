@@ -19,14 +19,29 @@ using namespace std;
 //Program Execution Begins 
 int main(int argc, char** argv) {
     //Declare all Variables
-    float 
+    int PrevSlry;     //Previous Salary
+    float Mnths=1.5f, //Retroactive Months
+            MnthsYr=12;  //12 Months in 1 Year
+    int NewAnulSlry,      //Annual Salary
+          RtroActvPay,   //Retroactive Pay
+          NewMnthySlry;      //Monthly Salary 
+    float PayIncrse=.0076f;   //Pay Increase from Percent
    
     //Input or initialize values
     
     //Process/Calculations 
+    NewAnulSlry=(1+PayIncrse)*PrevSlry;
+    NewMnthySlry=(1+PayIncrse/MnthsYr)*PrevSlry;
+    RtroActvPay=
+    
     
     //Output Located 
-
+    cout<<"Previous Salary = $";
+    cin>>PrevSlry;
+    cout<<"Retroactive Pay = $";
+    cout<<"New Annual Salary = $"<<NewAnulSlry<<endl;
+    cout<<"New Monthly Salary = $"<<NewMnthySlry<<endl;
+    
     //Exit
     return 0;
 }

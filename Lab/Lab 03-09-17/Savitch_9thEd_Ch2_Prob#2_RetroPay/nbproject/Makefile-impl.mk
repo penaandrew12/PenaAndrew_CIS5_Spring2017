@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Andrew Pena
+PROJECTNAME=Savitch_9thEd_Ch2_Prob#2_RetroPay
 
 # Active Configuration
 DEFAULTCONF=Debug
