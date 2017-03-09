@@ -20,14 +20,14 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare all Variables
     float Sugr=15.0f,     //Sugar in Cups
-                   Bttr=1.0f,      //Butter in Cups
-                   Flour=2.75f;    //Flour in Cups
+          Bttr=1.0f,      //Butter in Cups
+          Flour=2.75f;    //Flour in Cups
     float RS,        //Ratio for sugar a cookie 
-            RB,     //Ratio for Butter a cookie
-            RF;     //Ratio for Flour a cookie
+          RB,     //Ratio for Butter a cookie
+          RF;     //Ratio for Flour a cookie
     float TtlSug,    //Total Sugar needed
-            TtlBttr,    //Total Butter needed 
-            TtlFlour;   //Total Flour needed
+          TtlBttr,    //Total Butter needed 
+          TtlFlour;   //Total Flour needed
     float TtlCkies=48.0f;          //Total Cookies
     char Ckies;     //Amount of Cookies
    
@@ -35,9 +35,6 @@ int main(int argc, char** argv) {
    RS=Sugr/TtlCkies;
    RB=Bttr/TtlCkies;
    RF=Flour/TtlCkies;
-   TtlSug=Ckies*RS;
-   TtlBttr=Ckies*RB;
-   TtlFlour=Ckies*RF;
             
     //Process/Calculations 
     cout<<"Out of 48 Cookies"<<endl;
@@ -46,6 +43,10 @@ int main(int argc, char** argv) {
     cout<<"Flour Per Cookie  = "<<RF<<" Cups"<<endl;
     cout<<"Amount of Cookies desired = ";
     cin>>Ckies;
+    
+    TtlSug=Ckies*RS;
+    TtlBttr=Ckies*RB;
+    TtlFlour=Ckies*RF;
     cout<<"Total Sugar Required  ="<<TtlSug<<" Cups"<<endl;
     cout<<"Total Butter Required ="<<TtlBttr<<" Cups"<<endl;
     cout<<"Total Flour Required  ="<<TtlFlour<<" Cups"<<endl;
