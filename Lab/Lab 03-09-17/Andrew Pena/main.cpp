@@ -1,31 +1,30 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
- * Created on July 19, 2016, 9:07 AM
- * Purpose:  Hello World Template
+ * Author: Andrew Pena
+ * Created on March 03, 2017, 11:30 AM
+ * Purpose: Recipe
  */
 
-//System Libraries Here
+//System Libraries
 #include <iostream>
 using namespace std;
 
-//User Libraries Here
+//User Libraries
 
 //Global Constants Only, No Global Variables
 //Like PI, e, Gravity, or conversions
 
-//Function Prototypes Here
+//Function Prototypes 
 
-//Program Execution Begins Here
+//Program Execution Begins 
 int main(int argc, char** argv) {
-    //Declare all Variables Here
+    //Declare all Variables
+   
+    //Input or initialize values
     
-    //Input or initialize values Here
+    //Process/Calculations 
     
-    //Process/Calculations Here
-    
-    //Output Located Here
-    cout<<"Hello World"<<endl;
+    //Output Located 
 
     //Exit
     return 0;
