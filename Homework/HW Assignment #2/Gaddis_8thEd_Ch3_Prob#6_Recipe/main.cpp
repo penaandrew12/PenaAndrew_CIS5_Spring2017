@@ -21,7 +21,7 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare all Variables
     float Sugr=1.5f,     //Sugar in Cups
-          Bttr=1,      //Butter in Cups
+          Bttr=1.0f,      //Butter in Cups
           Flour=2.75f;    //Flour in Cups
     float RS,        //Ratio for sugar a cookie 
           RB,     //Ratio for Butter a cookie
@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
           TtlBttr,    //Total Butter needed 
           TtlFlour;   //Total Flour needed
     float TtlCkies=48;          //Total Cookies
-    char Ckies;     //Amount of Cookies
+    float Ckies;     //Amount of Cookies
    
     //Input or initialize values
    RS=Sugr/TtlCkies;
