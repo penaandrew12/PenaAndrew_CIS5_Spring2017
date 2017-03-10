@@ -21,25 +21,26 @@ const float PRCENT=100; //Percent Conversion
 int main(int argc, char** argv) {
     
     //Declare variables
-    float 
+    float Bag=30,       //30 Cookies in a bag
+            Svrgs=10,   //10 Servings for bag
+            Clrs=300;   //300 Calories for bag
+    float ClrCkie,      //Calorie Per One Cookie
+          CksSrvgs,     //Cookies Per Serving
+          TtlClrs,     //Total Calories From Cookies Eaten
+          CkiesEtn;   //Cookies Eaten
+    
     
     //Initialize variables
-    cout<<"Number of Males = ";
-    cin>>M;
-    cout<<"Number of Females = ";
-    cin>>F;
+    cout<<"Number of Cookies Ate = ";
+    cin>>CkiesEtn;
     
     //Input data
-    TtlStnds=M+F;
-    PrcntM=M/TtlStnds*PRCENT;
-    PrcntF=F/TtlStnds*PRCENT;
+    CksSrvgs=Bag/Svrgs;
+    ClrCkie=Clrs/CksSrvgs;
+    TtlClrs=CkiesEtn*ClrCkie;
     
     //Output the transformed data
-    cout<<fixed<<setprecision(0);
-    cout<<"Total Amount of Student in Class = "<<TtlStnds<<endl;
-    cout<<"Percentage of Males = "<<PrcntM<<"%"<<endl;
-    cout<<"Percentage of Females = "<<PrcntF<<"%"<<endl;
-    
+    cout<<"Total Amount of Calories From Cookie(s) = "<<TtlClrs<<endl;
     //Exit stage!
     return 0;
 }
