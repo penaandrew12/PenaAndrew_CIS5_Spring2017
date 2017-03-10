@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 9, 2017, 3:51 PM
+ * Created on March 9, 2017, 4:00 PM
  * Purpose:
  */
 
@@ -18,6 +18,9 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
+    float FVLoan=1000.00f,  //Face Value in Dollars
+            IntrstRte=.15,  //Interest Rate from percent
+            Mnths=18;       //Duration Kept in Months
     
     //Initialize variables
     
