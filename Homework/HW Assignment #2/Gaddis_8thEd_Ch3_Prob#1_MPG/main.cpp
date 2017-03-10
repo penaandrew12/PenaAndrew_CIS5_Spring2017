@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 9, 2017, 3:51 PM
+ * Created on March 9, 2017, 7:00 PM
  * Purpose: MPG Calculations
  */
 
@@ -18,9 +18,9 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    float GalHld,
-            MlsDrvn,
-            MPG;
+    float GalHld,       //Gallons Car Can Hold
+            MlsDrvn,    //Miles Driven on Full Tank of Gas
+            MPG;        //Miles Per Gallon
     
     //Initialize variables
     cout<<"Full Tank of Gas in Gallons = ";

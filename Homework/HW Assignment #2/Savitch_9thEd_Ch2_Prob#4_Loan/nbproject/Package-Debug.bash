@@ -13,9 +13,9 @@ CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/this_is_practice_problem_from_savitch
-OUTPUT_BASENAME=this_is_practice_problem_from_savitch
-PACKAGE_TOP_DIR=thisispracticeproblemfromsavitch/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/savitch_9thed_ch2_prob_4_loan
+OUTPUT_BASENAME=savitch_9thed_ch2_prob_4_loan
+PACKAGE_TOP_DIR=savitch9thedch2prob#4loan/
 
 # Functions
 function checkReturnCode
@@ -60,15 +60,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/thisispracticeproblemfromsavitch/bin"
+makeDirectory "${NBTMPDIR}/savitch9thedch2prob#4loan/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/thisispracticeproblemfromsavitch.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/savitch9thedch2prob#4loan.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/thisispracticeproblemfromsavitch.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/savitch9thedch2prob#4loan.tar *
 checkReturnCode
 
 # Cleanup

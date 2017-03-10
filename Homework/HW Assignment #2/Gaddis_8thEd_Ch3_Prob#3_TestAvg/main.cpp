@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 9, 2017, 3:51 PM
+ * Created on March 9, 2017, 6:30 PM
  * Purpose: Test Average Calculations
  */
 
@@ -41,8 +41,6 @@ int main(int argc, char** argv) {
     
     //Input data
     TstAvg=(TSOne + TSTwo + TSThree + TSFour + TSFive)/5;
-    
-    //Map inputs to outputs or process the data
     
     //Output the transformed data
     cout<<fixed<<setprecision(1);

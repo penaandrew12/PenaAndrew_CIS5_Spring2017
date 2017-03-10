@@ -30,11 +30,12 @@ int main(int argc, char** argv) {
     cin>>NumOne;
     cout<<"Second Number = +";
     cin>>NumTwo;
-            
+    
     //Map inputs to outputs or process the data
     Sum=NumOne+NumTwo;
     
     //Output the transformed data
+    
     cout<<"Answer        =  "<<Sum<<endl;
     
     //Exit stage!

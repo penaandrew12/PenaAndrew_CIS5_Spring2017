@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on March 9, 2017, 3:51 PM
- * Purpose: Test Average Calculations
+ * Purpose: Number of Widgets on Pallets
  */
 
 //System Libraries

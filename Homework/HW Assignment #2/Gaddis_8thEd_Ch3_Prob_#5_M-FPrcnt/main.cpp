@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 9, 2017, 3:51 PM
- * Purpose: Test Average Calculations
+ * Created on March 9, 2017, 4:51 PM
+ * Purpose: Male - Female Percentages in whole class
  */
 
 //System Libraries
@@ -21,7 +21,11 @@ const float PRCENT=100; //Percent Conversion
 int main(int argc, char** argv) {
     
     //Declare variables
-    float 
+    float M,    //Amount of Males
+          F,    //Amount of Females
+          TtlStnds, //Total Students
+          PrcntM,   //Percent Male
+          PrcntF;   //Percent Female
     
     //Initialize variables
     cout<<"Number of Males = ";

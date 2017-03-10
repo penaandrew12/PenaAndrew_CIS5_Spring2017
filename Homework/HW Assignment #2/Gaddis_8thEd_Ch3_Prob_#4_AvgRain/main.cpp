@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 9, 2017, 3:51 PM
- * Purpose: Test Average Calculations
+ * Created on March 9, 2017, 5:51 PM
+ * Purpose: Average Amount of Rain at end of Three Months
  */
 
 //System Libraries
