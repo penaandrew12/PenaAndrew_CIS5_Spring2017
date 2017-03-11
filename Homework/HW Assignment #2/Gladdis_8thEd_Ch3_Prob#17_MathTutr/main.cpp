@@ -22,6 +22,7 @@ int main(int argc, char** argv) {
             NumTwo,     //Second Number
             Sum,        //Sum of Two Numbers
             Hit;        //Hit for Answer
+    char ch;
     
     //Initialize variables
    
@@ -30,13 +31,16 @@ int main(int argc, char** argv) {
     cin>>NumOne;
     cout<<"Second Number = +";
     cin>>NumTwo;
+    cout<<"Please Press Enter for Answer";
+    cin.get();
+    cin.ignore();
     
     //Map inputs to outputs or process the data
     Sum=NumOne+NumTwo;
     
     //Output the transformed data
     
-    cout<<"Answer        =  "<<Sum<<endl;
+    cout<<"\nAnswer        =  "<<Sum<<endl;
     
     //Exit stage!
     return 0;
