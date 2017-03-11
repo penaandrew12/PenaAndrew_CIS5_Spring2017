@@ -5,8 +5,8 @@
  * Purpose: Practice Programming
  */
 
-#include <iostream>
-#include <iomanip>
+#include <iostream>     //Library  
+#include <iomanip>      //Library
 
 using namespace std;
 
@@ -16,9 +16,7 @@ int main(int argc, char** argv) {
             sold, 
             store1,
             store2,
-            store3,
-            store4 = 23;
-    char ch;
+            store3;
     
     cout<<"One week ago, 3 new widget stores opened\n";
     cout<<"at the same time with the same beginning\n";
@@ -37,13 +35,15 @@ int main(int argc, char** argv) {
     
     cout<<"How many widgets has store 3 sold? ";
     cin>>sold;
-    store3-=sold;
+    store3-=sold; //symbol -= is used for easier operation
     
-    cout<<"\nThe current inventory of each store\n";
-    cout<<"Store 1; "<<left<<setw(4)<<store1<<endl;
-    cout<<"Store 2; "<<right<<setw(4)<<store2<<endl;
+    cout<<"\nThe current inventory of each store"; //symbol \n is to make new line
+    cin.get();          //Pauses Program
+    cin.ignore();       //Ignore is needed if cin>> is inputed
+    cout<<fixed<<setprecision(3);  //Used to cut-off variable if needed
+    cout<<"Store 1; "<<left<<setw(4)<<store1<<endl;         //Left sets variable to left margin
+    cout<<"Store 2; "<<right<<setw(4)<<store2<<endl;        //setw(#)sets variable however many places
     cout<<"Store 3; "<<setw(4)<<store3<<endl;
-    cout<<"Store 4; "<<setw(4)<<store4<<endl;
     
     return 0;
 }
