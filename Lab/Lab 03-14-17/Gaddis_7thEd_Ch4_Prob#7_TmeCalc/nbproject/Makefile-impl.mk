@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=CPPTemplate
+PROJECTNAME=Gaddis_7thEd_Ch4_Prob#7_TmeCalc
 
 # Active Configuration
 DEFAULTCONF=Debug
