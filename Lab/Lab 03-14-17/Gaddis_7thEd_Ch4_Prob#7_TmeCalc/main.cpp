@@ -35,23 +35,28 @@ int main(int argc, char** argv) {
     cin>>nSecs;
     
     //Process/Calculations
-    nYrs=nSecs/YEAR;
-    cout<<nYrs<<" Years ";
-    nSecs-=nYrs*YEAR;
-    nWks=nSecs/WEEK;
-    cout<<nWks<<" Weeks ";
-    nMnths=nWks*3/13;
-    cout<<nMnths<<" Months ";
-    nSecs-=nWks*WEEK;
-    nDys=nSecs/DAY;
+    nYrs=nSecs/YEAR;            //Number of Years
+    cout<<nYrs<<" Years (";
+    nSecs-=nYrs*YEAR;           //Subtract Yearly Seconds from remaining
+    
+    nWks=nSecs/WEEK;            //Number of weeks
+    cout<<nWks<<" Weeks or ";
+    nMnths=nWks*3/13;           //Convert number of weeks to months
+    cout<<nMnths<<" Months)";
+    nSecs-=nWks*WEEK;           //Subtract off weekly seconds from remaining
+    
+    nDys=nSecs/DAY;             //Number of days left
     cout<<nDys<<" Days ";
-    nSecs-=nDys*DAY;
-    nHrs=nSecs/HOUR;
+    nSecs-=nDys*DAY;            //Subtract off daily seconds from remaining
+    
+    nHrs=nSecs/HOUR;            //Number of hours left
     cout<<nHrs<<" Hours ";
-    nSecs-=nHrs*HOUR;
-    nMin=nSecs/MINUTE;
+    nSecs-=nHrs*HOUR;           //Subtract off hourly seconds from remaining
+    
+    nMin=nSecs/MINUTE;          //Number of minutes left
+    
     cout<<nMin<<" Minutes ";
-    nSecs-=nMin*MINUTE;
+    nSecs-=nMin*MINUTE;         //Remaining number of seconds
     cout<<nSecs<<" Seconds";
     
     
