@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
     nWks=nSecs/WEEK;            //Number of weeks
     cout<<nWks<<" Weeks or ";
     nMnths=nWks*3/13;           //Convert number of weeks to months
-    cout<<nMnths<<" Months)";
+    cout<<nMnths<<" Months) ";
     nSecs-=nWks*WEEK;           //Subtract off weekly seconds from remaining
     
     nDys=nSecs/DAY;             //Number of days left
