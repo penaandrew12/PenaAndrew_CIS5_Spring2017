@@ -40,6 +40,54 @@ int main(int argc, char** argv) {
     cout<<(!x||!y?'T':'F')<<" ";
     cout<<endl;
     
+    x=true;y=false;
+    cout<<(x?'T':'F')<<" ";
+    cout<<(y?'T':'F')<<"  ";
+    cout<<(!x?'T':'F')<<"  ";
+    cout<<(!y?'T':'F')<<"   ";
+    cout<<(x||y?'T':'F')<<"    ";
+    cout<<(x&&y?'T':'F')<<"   ";
+    cout<<(x^y?'T':'F')<<"    ";
+    cout<<(x^y^y?'T':'F')<<"     ";
+    cout<<(x^y^x?'T':'F')<<"      ";
+    cout<<(!(x||y)?'T':'F')<<"       ";
+    cout<<(!x&&!y?'T':'F')<<"      ";
+    cout<<(!(x&&y)?'T':'F')<<"       ";
+    cout<<(!x||!y?'T':'F')<<" ";
+    cout<<endl;
+    
+    x=false;y=true;
+    cout<<(x?'T':'F')<<" ";
+    cout<<(y?'T':'F')<<"  ";
+    cout<<(!x?'T':'F')<<"  ";
+    cout<<(!y?'T':'F')<<"   ";
+    cout<<(x||y?'T':'F')<<"    ";
+    cout<<(x&&y?'T':'F')<<"   ";
+    cout<<(x^y?'T':'F')<<"    ";
+    cout<<(x^y^y?'T':'F')<<"     ";
+    cout<<(x^y^x?'T':'F')<<"      ";
+    cout<<(!(x||y)?'T':'F')<<"       ";
+    cout<<(!x&&!y?'T':'F')<<"      ";
+    cout<<(!(x&&y)?'T':'F')<<"       ";
+    cout<<(!x||!y?'T':'F')<<" ";
+    cout<<endl;
+    
+    x=false;y=false;
+    cout<<(x?'T':'F')<<" ";
+    cout<<(y?'T':'F')<<"  ";
+    cout<<(!x?'T':'F')<<"  ";
+    cout<<(!y?'T':'F')<<"   ";
+    cout<<(x||y?'T':'F')<<"    ";
+    cout<<(x&&y?'T':'F')<<"   ";
+    cout<<(x^y?'T':'F')<<"    ";
+    cout<<(x^y^y?'T':'F')<<"     ";
+    cout<<(x^y^x?'T':'F')<<"      ";
+    cout<<(!(x||y)?'T':'F')<<"       ";
+    cout<<(!x&&!y?'T':'F')<<"      ";
+    cout<<(!(x&&y)?'T':'F')<<"       ";
+    cout<<(!x||!y?'T':'F')<<" ";
+    cout<<endl;
+    
     //Output the transformed data
     
     //Exit stage!
