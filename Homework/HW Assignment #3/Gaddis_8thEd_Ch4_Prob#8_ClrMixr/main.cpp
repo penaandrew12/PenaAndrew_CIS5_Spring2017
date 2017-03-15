@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     Ornge=Rd*Ylw;
     Gren=Ble*Ylw;
     
-        if (FrstClr='Rd')(ScndClr='Ble'){
+        if (FrstClr='Rd'ScndClr='Ble'){
         cout<<"If Red and Blue mix it makes Purple";}
         else
             
