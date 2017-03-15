@@ -19,8 +19,9 @@ using namespace std; //Name-space under which system libraries exist
 int main(int argc, char** argv) {
     //Declare variables
     char Ylw, Ble, Rd;          //Yellow, Blue, Red
-    char Prple, Ornge, Gren,   //Purple, Orange, Green
+    char Prple, Ornge, Gren,    //Purple, Orange, Green
          FrstClr, ScndClr;      //First Color, Second Color
+    char MxdClr;                //Mixed Color
     
     //Map inputs to outputs or process the data
     cout<<"Of the Three Primary Colors (Yellow, Red, Blue)";
@@ -28,21 +29,22 @@ int main(int argc, char** argv) {
     cout<<"First Color = ";
     cin>>FrstClr;
     cout<<"Second Color = ";
-    cin>>ScndClr; 
+    cin>>ScndClr;
     
+    MxdClr=FrstClr*ScndClr;
     Prple=Rd*Ble;
     Ornge=Rd*Ylw;
     Gren=Ble*Ylw;
     
-        if (FrstClr='Rd'ScndClr='Ble'){
-        cout<<"If Red and Blue mix it makes Purple";}
+    if (MxdClr='Prple'){
+        cout<<"\nIf Red and Blue mix it makes Purple";}
         else
             
-            if(FrstClr='Rd',ScndClr='Ylw'){
+            if(MxdClr='Ornge'){
             cout<<"If Blue and Yellow mix it makes Orange"; }   
             else
                 
-                if(FrstClr='Ble',ScndClr='Ylw'){
+                if(MxdClr='Gren'){
                 cout<<"If Blue and Yellow mix it makes Green"; }
                 else cout<<"Can not be determined with given colors";
     
