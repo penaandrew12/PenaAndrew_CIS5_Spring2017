@@ -25,6 +25,8 @@ int main(int argc, char** argv) {
                    PayRte;  //Pay Rate
     
     //Input or initialize values
+    cout<<"This Program allows you to determine your Pay Check."<<endl;
+    cout<<"It will also determine if you earned Over-Time."<<endl;
     cout<<"Hours Worked = ";
     cin>>HrsWrkd;
     cout<<"Pay Rate Per Hour = $";
