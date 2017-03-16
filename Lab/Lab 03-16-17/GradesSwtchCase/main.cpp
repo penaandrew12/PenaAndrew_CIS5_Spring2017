@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
     //Process/Calculations
     switch(scre/10){
         case 10:
-        case  9: grde='A';break;
+        case  9: grde='A';break;    
         case  8: grde='B';break;
         case  7: grde='C';break;
         case  6: grde='D';break;
@@ -49,4 +49,3 @@ int main(int argc, char** argv) {
     //Exit Stage
     return 0;
 }
-
