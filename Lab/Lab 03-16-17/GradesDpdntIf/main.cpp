@@ -28,18 +28,17 @@ int main(int argc, char** argv) {
     cout<<"The data type used is an integer [0-100]."<<endl;
     cout<<"Type in the score"<<endl;
     cin>>scre;
-    
     if(!(scre>=0&&scre<=100)){
         cout<<"You failed to type an integer between 0 and 100"<<endl;
         return 1;  //Use of DeMorgans law to make clear
     }
     
     //Process/Calculations
-    if(scre>=90&&scre<=100)grde='A';
-    if(scre>=80&&scre<90)  grde='B';
-    if(scre>=70&&scre<80)  grde='C';
-    if(scre>=60&&scre<70)  grde='D';
-    if(scre<60)            grde='F';
+    if(scre>=90)      grde='A';
+    else if(scre>=80) grde='B';
+    else if(scre>=70) grde='C';
+    else if(scre>=60) grde='D';
+    else              grde='F';
     
     //Output Located
     cout<<"For a Score = "<<scre<<" your grade is an "<<grde<<endl;
