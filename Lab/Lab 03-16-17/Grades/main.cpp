@@ -30,8 +30,8 @@ int main(int argc, char** argv) {
     cin>>scre;
     if(!(scre>=0&&scre<=100)){
         cout<<"You failed to type an integer between 0 and 100"<<endl;
-        return 1;  //Use of DeMorgans law to make clear
-    }
+        return 1; }  //Use of DeMorgans law to make clear
+    
     //Process/Calculations
     if(scre>=90&&scre<=100)grde='A';
     if(scre>=80&&scre<90)  grde='B';
