@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 9, 2017, 3:51 PM
+ * Created on March 19, 2017, 3:15 PM
  * Purpose: Change for Dollar Game
  */
 
@@ -18,15 +18,15 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    float Penny,
-            Dime,
-            Nikl,
-            Qrtr,
-            VPenny,
-            VDime,
-            VNikl,
-            VQrtr;
-    float Dllr;
+    float Penny,    //Penny
+            Dime,   //Dime
+            Nikl,   //Nickel
+            Qrtr,   //Quarter
+            VPenny, //Conversion Penny to dollar
+            VDime,  //Conversion Dime to dollar
+            VNikl,  //Conversion Nickel to dollar
+            VQrtr;  //Conversion Quarter to dollar
+    float Dllr; ///Dollar
     
     cout<<"Let's Play A Game! Enter a certain amount"
             " of coins to reach exactly 1 dollar.\n";
@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
     cout<<"Quarter = ";
     cin>>Qrtr;
     
+    //Conversions to dollar
     VPenny=Penny*.01f;
     VDime=Dime*.10f;
     VNikl=Nikl*.05f;

@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 19, 2017, 3:51 PM
- * Purpose:
+ * Created on March 19, 2017, 2:30 PM
+ * Purpose: Determine whether two numbers are a minimum or a maximum
  */
 
 //System Libraries

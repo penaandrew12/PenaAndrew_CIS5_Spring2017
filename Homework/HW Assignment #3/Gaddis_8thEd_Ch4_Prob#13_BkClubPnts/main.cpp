@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on March 18, 2017, 1:32 PM
- * Purpose: 
+ * Purpose: Determine how many points a person has from buying books
  */
 
 //System Libraries
@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
     cout<<"How many Books have you purchased within the last month?"<<endl;
     cin>>Bk;
             
-        if (Bk<0)                           //Integer less than 0
+        if (Bk<0)                           //Integer less than 0 Invalid Number
         {   cout<<"INVALID NUMBER"<<endl;
             return 1;
         }

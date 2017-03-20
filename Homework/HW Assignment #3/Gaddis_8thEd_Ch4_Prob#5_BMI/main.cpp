@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 9, 2017, 3:51 PM
- * Purpose:
+ * Created on March 19, 2017, 2:55 PM
+ * Purpose: Determine Body Mass Index
  */
 
 //System Libraries
@@ -31,22 +31,23 @@ int main(int argc, char** argv) {
     cin>>Hght;
     cout<<"Enter your Weight in Pounds = ";
     cin>>Wght;
-    cout<<fixed<<setprecision(2)<<endl;
+    cout<<fixed<<setprecision(2)<<endl;         //Manipulator
     BMI=Wght*(703/pow(Hght,2));
     
     //Output the transformed data
-    if(BMI>25&&BMI<18.5)
-    cout<<"You have optimal weight. ";
+    if(BMI<18.5){                       //BMI under 18.5 underweight
+    cout<<"You are considered underweight. ";
     cout<<"You have a BMI of "<<BMI<<endl;
+    }  
+    else if(BMI>25){                        //BMI over 25 overweight
+             cout<<"You are considered overweight. ";
+             cout<<"You have a BMI of "<<BMI<<endl;
+            }
+                else if(BMI<25&&BMI>18.5){          //BMI Optimal
+                     cout<<"You have optimal weight. ";
+                     cout<<"You have a BMI of "<<BMI<<endl;
+                }
     
-        if(18.5>BMI)
-        cout<<"You are considered underweight. ";
-        cout<<"You have a BMI of "<<BMI<<endl;
-          
-            if(25<BMI)
-                 cout<<"You are considered overweight. ";
-                 cout<<"You have a BMI of "<<BMI<<endl;
-            
     //Exit stage!
     return 0;
 }
