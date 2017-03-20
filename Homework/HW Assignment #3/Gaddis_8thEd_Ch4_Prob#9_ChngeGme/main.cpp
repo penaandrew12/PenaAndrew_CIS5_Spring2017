@@ -50,17 +50,17 @@ int main(int argc, char** argv) {
     
 
     //Output the transformed data
-    if(Dllr='1'){
+    if(Dllr==1){
     cout<<"Congratulations! You Win! You Got Exactly One Dollar.\n";
     cout<<"$"<<Dllr<<endl;}
     else
-        if(Dllr>'1'){
+        if(Dllr>1){
         cout<<"Sorry to Inform you, but you are not a winner.\n"
                 "You Went Over a dollar.\n"
                 "Try Again.\n";
         cout<<"$"<<Dllr<<endl;}
         else
-            if(Dllr<'1'){
+            if(Dllr<1){
             cout<<"Sorry to Inform you, but you are not a winner.\n"
                 "You were less than a dollar.\n"
                 "Try Again.\n";
