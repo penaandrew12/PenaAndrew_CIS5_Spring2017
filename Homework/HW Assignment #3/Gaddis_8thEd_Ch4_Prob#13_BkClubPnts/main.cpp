@@ -20,17 +20,15 @@ int main(int argc, char** argv) {
     cout<<"How many Books have you purchased within the last month?"<<endl;
     cin>>Bk;
             
-        if (Bk<0)                           //Integer less than 0 Invalid Number
-        {   cout<<"INVALID NUMBER"<<endl;
-            return 1;
-        }
-    
     //Map inputs to outputs or process the data
-    if(Bk==0)    Pnts=0;
-    if(Bk==1)    Pnts=5;
-    if(Bk==2)    Pnts=15;
-    if(Bk==3)    Pnts=30;
-    else         Pnts=60;
+    if (Bk<0){            //Integer less than 0 Invalid Number
+        cout<<"INVALID NUMBER"<<endl;
+    }
+    else if(Bk==0)    Pnts=0;
+    else if(Bk==1)    Pnts=5;
+    else if(Bk==2)    Pnts=15;
+    else if(Bk==3)    Pnts=30;
+    else              Pnts=60;
           
     //Output the transformed data
     cout<<"You currently have a total of "<<Pnts<<" Points."<<endl;
