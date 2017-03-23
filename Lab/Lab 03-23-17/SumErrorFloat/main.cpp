@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on March 23, 2017, 11:30 AM
- * Purpose: Brute Force
+ * Purpose: Brute Force Sum Compare to Multiplication
  */
 
 //System Libraries 
@@ -20,7 +20,6 @@ using namespace std;
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Declare all Initialize Variables
-    //Make sure 0<=n<=40000
     int nLoop=10000000;
     float sum=0.0f,frac=0.1f;
     
