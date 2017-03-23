@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on March 23, 2017, 11:30 AM
- * Purpose: Sum 1 to N
+ * Purpose: Brute Force
  */
 
 //System Libraries 
@@ -20,16 +20,22 @@ using namespace std;
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Declare all Initialize Variables
-    int n=10000, sum=0;
+    //Make sure 0<=n<=40000
+    int nLoop=10000000;
+    float sum=0.0f,frac=0.5f;
     
     //Input values
-    for(int i=1;1<=n;i++){
-        sum+=i;
+    for(int i=1;i<=nLoop;i++){
+        sum+=frac;
     }
     
     //Output Located
-    cout<<"the computed sum of 1 to "<<n<<" = "<<sum<<endl;
-    cout<<"and "<<n<<"*("<<n<<"+1/2="<<n*(n+1)/2<<endl;
+    cout<<"The computed sum of "
+            <<frac<<"->"<<nLoop<<" times = "<<sum<<endl;
+    cout<<"Simple multiplication of "
+            <<frac<<"x"<<nLoop<<" = "<<frac*nLoop<<endl;
+    cout<<"Error = "<<(frac*nLoop-sum)/(frac*nLoop)*100
+            <<"%"<<endl;
     
     //Exit Stage
     return 0;
