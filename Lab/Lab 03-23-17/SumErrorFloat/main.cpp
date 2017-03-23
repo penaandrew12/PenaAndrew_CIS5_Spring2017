@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     //Declare all Initialize Variables
     //Make sure 0<=n<=40000
     int nLoop=10000000;
-    float sum=0.0f,frac=0.5f;
+    float sum=0.0f,frac=0.1f;
     
     //Input values
     for(int i=1;i<=nLoop;i++){
