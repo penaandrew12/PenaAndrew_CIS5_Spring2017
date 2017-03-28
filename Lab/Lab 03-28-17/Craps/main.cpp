@@ -62,9 +62,6 @@ int main(int argc, char** argv) {
     cout<<"11 was thrown "<<f11<<"out of "<<nThrws<<" times"<<endl;
     cout<<"12 was thrown "<<f12<<"out of "<<nThrws<<" times"<<endl;
     
-    
-    
-    
     //Exit
     return 0;
 }
