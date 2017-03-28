@@ -28,11 +28,13 @@ int main(int argc, char** argv) {
     
     //Declare all Variables Here
     ifstream in;
+    ofstream out;
     int nGames=0,Wins=0,Losses=0;
     int mxThrw=0,numThrw=0;
     
     //Initialize
     in.open("GameInfo.dat");
+    out.open("GameStats.dat");
     while(in>>nGames); //Last Value becomes number of games
     
     //Play Game
@@ -85,7 +87,22 @@ int main(int argc, char** argv) {
     cout<<"Maximum number of throws in a Game = "<<mxThrw<<endl;
     cout<<"Average Throw Per Game = "<<static_cast<float>(numThrw)/nGames<<endl;
     
+    //Output to a File
+    out<<fixed<<setprecision(2)<<showpoint;
+    out<<"Total Number of Games         = "<<nGames<<endl;
+    out<<"Number of Games Won           = "<<Wins<<endl;
+    out<<"Number of Games Loss          = "<<Losses<<endl;
+    out<<"Total Games of Wins and Loses = "<<Wins+Losses<<endl;
+    out<<"Percentage Wins               = "
+            <<static_cast<float>(Wins)/nGames*PERCENT<<"%"<<endl;
+    out<<"Percentage Losses             = "
+            <<static_cast<float>(Losses)/nGames*PERCENT<<"%"<<endl;
+    out<<"Maximum number of throws in a Game = "<<mxThrw<<endl;
+    out<<"Average Throw Per Game = "<<static_cast<float>(numThrw)/nGames<<endl;
+    
     //Exit Stage Right!
     in.close();
+    out.close();
     return 0;
 }
+
