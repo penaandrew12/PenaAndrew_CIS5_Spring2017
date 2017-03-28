@@ -50,6 +50,7 @@ int main(int argc, char** argv) {
     }
     
     //Output Located Here
+    cout<<"Statistics of Summing and Throwing a pair of Dice"<<endl;
     cout<<"2 was thrown "<<f2<<"out of "<<nThrws<<" times"<<endl;
     cout<<"3 was thrown "<<f3<<"out of "<<nThrws<<" times"<<endl;
     cout<<"4 was thrown "<<f4<<"out of "<<nThrws<<" times"<<endl;
@@ -61,6 +62,8 @@ int main(int argc, char** argv) {
     cout<<"10 was thrown "<<f10<<"out of "<<nThrws<<" times"<<endl;
     cout<<"11 was thrown "<<f11<<"out of "<<nThrws<<" times"<<endl;
     cout<<"12 was thrown "<<f12<<"out of "<<nThrws<<" times"<<endl;
+    cout<<endl<<"Total throws = "<<(f2+f3+f4+f5+f6+f7+f8+f9+f10+f11+f12)
+            <<" = "<<nThrws<<endl;
     
     //Exit
     return 0;
