@@ -63,8 +63,8 @@ int main(int argc, char** argv) {
             }
             case '/':{
                 answer=rand()%90+10; //[100-999]
-                op2=rand()%90+10;      //[10-99]
-                op1=answer*op2;        //[2-3 Digit Result]
+                op2=rand()%90+10;    //[10-99]
+                op1=answer*op2;      //[2-3 Digit Result]
                 break;
             }
             default:{
