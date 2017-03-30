@@ -31,12 +31,12 @@ int main(int argc, char** argv) {
        cout<<"Type 1 for sum 1 to n problem "<<endl;
        cout<<"type 2 for sum 0.1 error problem"<<endl;
        cout<<"type 3 for problem 3"<<endl;
-       cout<<"type 3 for problem 3"<<endl;
-       cout<<"type 3 for problem 3"<<endl;
-       cout<<"type 3 for problem 3"<<endl;
-       cout<<"type 3 for problem 3"<<endl;
-       cout<<"type 3 for problem 3"<<endl;
-       cout<<"type 3 for problem 3"<<endl;
+       cout<<"type 4 for problem 4"<<endl;
+       cout<<"type 5 for problem 5"<<endl;
+       cout<<"type 6 for problem 6"<<endl;
+       cout<<"type 7 for problem 7"<<endl;
+       cout<<"type 8 for problem 8"<<endl;
+       cout<<"type 9 for problem 9"<<endl;
 
        cin>>choice;
        
