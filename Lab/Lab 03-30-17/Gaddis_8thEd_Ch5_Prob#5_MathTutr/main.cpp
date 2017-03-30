@@ -6,9 +6,10 @@
  */
 
 //System Libraries 
-#include <iostream>     //Library
-#include <cstdlib>      //Random number Genertator
-#include <ctime>        //Set the random number seed
+#include <iostream>  //Library
+#include <cstdlib>   //Random number Genertator
+#include <ctime>     //Set the random number seed
+#include <iomanip>   //Formatting
 using namespace std;
 
 //User Libraries 
@@ -29,40 +30,60 @@ int main(int argc, char** argv) {
     char choice;
     
     //Input or initialize values
-    cout<<"This Program, Math Tutor, will help you with Math."<<endl;
-    cout<<"Choose An Operation * / + - "<<endl;
-    cin>>choice;
-    
-    //Process/Calculations
-    switch(choice){
-        case '+':{
-            op1=rand()%900+100; //[100-999]
-            op2=rand()%900+100; //[100-999]
-            answer=op1+op2;     //[3-4 Digit Result]
+    do{
+        cout<<"This Program, Math Tutor, will help you with Math."<<endl;
+        cout<<"Choose An Operation [+]Addition [-]Subtraction "
+              "[*]Multiplication\n[/]Division or anything else to Exit."<<endl;
+        cin>>choice;
+        cout<<endl<<endl;
+        if(!(choice=='+'||choice=='-'||choice=='*'||choice=='/')){
+            cout<<"Exit Math Tutor"<<endl;
+            exit(0);
         }
-        case '-':{
-            op1=rand()%900+100; //[100-999]
-            op2=rand()%900+100; //[100-999]
-            answer=op1-op2;     //[0-3 Digit Result]
-        }
-        case '*':{
-            op1=rand()%90+10; //[10-99]
-            op2=rand()%90+10; //[10-99]
-            answer=op1*op2;   //[2-4 Digit Result]
-        }
-        case '/':{
-            answer=rand()%900+100; //[100-999]
-            op2=rand()%90+10;      //[10-99]
-            op1=answer*op2;        //[2-3 Digit Result]
-        }
-        default:{
-            cout<<"Bad Operator"<<endl;
-            return 1;
-        }
-    }
-            
-    //Output Located
 
+        //Process/Calculations
+        switch(choice){
+            case '+':{
+                op1=rand()%900+100; //[100-999]
+                op2=rand()%900+100; //[100-999]
+                answer=op1+op2;     //[3-4 Digit Result]
+                break;
+            }
+            case '-':{
+                op1=rand()%900+100; //[100-999]
+                op2=rand()%900+100; //[100-999]
+                answer=op1-op2;     //[0-3 Digit Result]
+                break;
+            }
+            case '*':{
+                op1=rand()%90+10; //[10-99]
+                op2=rand()%90+10; //[10-99]
+                answer=op1*op2;   //[2-4 Digit Result]
+                break;
+            }
+            case '/':{
+                answer=rand()%900+100; //[100-999]
+                op2=rand()%90+10;      //[10-99]
+                op1=answer*op2;        //[2-3 Digit Result]
+                break;
+            }
+            default:{
+                cout<<"Bad Operator"<<endl;
+                return 1;
+            }
+        }
+
+        //Output Located
+        cout<<setw(8)<<op1<<endl;
+        cout<<choice<<setw(7)<<op2<<endl;
+        cout<<"--------"<<endl;
+        cin>>result;
+
+        //Compare the Answer
+        cout<<endl;
+        cout<<((result==answer)?"Correct":"Incorrect")<<endl;
+    }while(choice=='+'||choice=='-'||choice=='*'||choice=='/');
+    
     //Exit Stage
     return 0;
 }
