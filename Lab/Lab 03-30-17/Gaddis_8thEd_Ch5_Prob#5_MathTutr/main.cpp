@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     do{
         cout<<"This Program, Math Tutor, will help you with Math."<<endl;
         cout<<"Choose An Operation [+]Addition [-]Subtraction "
-              "[*]Multiplication\n[/]Division or anything else to Exit."<<endl;
+              "[*]Multiplication"<<endl<<"[/]Division or Anything Else to Exit."<<endl;
         cin>>choice;
         cout<<endl<<endl;
         if(!(choice=='+'||choice=='-'||choice=='*'||choice=='/')){
