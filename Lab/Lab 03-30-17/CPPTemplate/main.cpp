@@ -21,6 +21,7 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare all Variables
     
+    
     //Input or initialize values
     
     //Process/Calculations
