@@ -18,21 +18,23 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    int num=0;
-    
-    //Initialize variables
-    
+    int num=1,
+        DNum,
+        sum;
+
     //Input data
-    cout<<"This Progarm will get the sum of the number you have entered starting from 1."<<endl;
-    cout<<"Enter a Real Number other than a Negative and 1."<<endl;
-    cout<<"If a Negative or 1 is Entered it will Not Compute."<<endl;
-    cin>>num;
-    
-    //Map inputs to outputs or process the data
+    cout<<"This Program will get the sum of adding the integers you have entered starting from 1."<<endl;
+    cout<<"Enter a Real Number other than a Negative, 0, and 1."<<endl;
+    cout<<"If a Negative, 0, or 1 is Entered it will Not Compute."<<endl;
+    cin>>sum;
+    cout<<"If you were to add all integers from 1 to "<<sum<<endl;
     
     //Output the transformed data
-    for(num=0;num<=10;num++)
-        cout<<"If you were to add the sum from "<<num<<". It would be = "<<endl;
+    for(num=1;num<=sum;num++){
+        DNum=(n(n+1))/2;
+    }
+    
+    cout<<"You would get = "<<DNum<<endl;
     
     //Exit stage!
     return 0;
