@@ -21,16 +21,12 @@ int main(int argc, char** argv) {
     //Declare variables
     int Count=0;    //Number to Start
     
-    //Initialize variables
-    
     //Input data
     cout<<"This Program will calculate A Rising Sea Level for 25 years if it rises by 1.5 Millimeters Per Year"<<endl;
     cout<<"Press Enter to Display Table."<<endl;
     cin.get();
     cout<<"Year          Amount Risen"<<endl;
     cout<<"--------------------------"<<endl;
-    
-    //Map inputs to outputs or process the data
     
     //Output the transformed data
     for(Count=1;Count<=9;Count++)
