@@ -18,21 +18,25 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    float F,        //Fahrenheit
-          C;      //Celsius
+    float F,  //Fahrenheit
+          C;  //Celsius
     
     //Initialize variables
-    cout<<"Celsius = ";
-    cin>>C;     
+    cout<<"This Program will Display a Table from 0 to 20 Degrees Celsius and convert it to Fahrenheit."<<endl;
+    cout<<"Hit Enter For Table,"<<endl;
+    cin.get();
+    cout<<"Celsius        Fahrenheit"<<endl;
+    cout<<"-------------------------"<<endl;
             
-    //Input data
-    F=32+1.8*C;
-    
-    //Map inputs to outputs or process the data
-    
     //Output the transformed data
-    cout<<"Fahrenheit = "<<F<<" degrees"<<endl;
-    
+    for(int C=0;C<=9;C++){
+        F=32+1.8*C;
+        cout<<C<<"              "<<F<<endl;
+    }
+    for(int C=10;C<=20;C++){
+        F=32+1.8*C;
+        cout<<C<<"             "<<F<<endl;
+    }    
     //Exit stage!
     return 0;
 }

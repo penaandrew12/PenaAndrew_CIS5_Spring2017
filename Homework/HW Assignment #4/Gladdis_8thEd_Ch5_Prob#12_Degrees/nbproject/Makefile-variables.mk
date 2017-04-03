@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=gladdis_8thed_ch3_prob_12_degrees
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/gladdis_8thed_ch3_prob_12_degrees
+CND_ARTIFACT_NAME_Debug=gladdis_8thed_ch5_prob_12_degrees
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/gladdis_8thed_ch5_prob_12_degrees
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=gladdis8thedch3prob#12degrees.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/gladdis8thedch3prob#12degrees.tar
+CND_PACKAGE_NAME_Debug=gladdis8thedch5prob#12degrees.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/gladdis8thedch5prob#12degrees.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=gladdis_8thed_ch3_prob_12_degrees
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/gladdis_8thed_ch3_prob_12_degrees
+CND_ARTIFACT_NAME_Release=gladdis_8thed_ch5_prob_12_degrees
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/gladdis_8thed_ch5_prob_12_degrees
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=gladdis8thedch3prob#12degrees.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/gladdis8thedch3prob#12degrees.tar
+CND_PACKAGE_NAME_Release=gladdis8thedch5prob#12degrees.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/gladdis8thedch5prob#12degrees.tar
 #
 # include compiler specific variables
 #
