@@ -18,18 +18,29 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    cout<<"Pattern A            Pattern B"<<endl;
-    cout<<"------------------------------"<<endl;
+    int a,b,x,y;
+    cout<<"Pattern A    "<<endl;
+    cout<<"-----------------"<<endl;
     
     //output
-    int n=10;
-    
-    for (int y = 1; y <= n; y++){
-    for (int x = 1; x <= n; x++)
-    if ((x == y) || (y == x)) cout << " ";
-    else cout << "+";
-    cout << endl;
+    for(x=1;x<=10;x++){
+    for(y=1;y<=x;y++){
+    cout<<"+";
     }
+    cout<<endl;
+    }
+    cout<<"-----------------"<<endl;
+
+    cout<<"Pattern B"<<endl;
+    cout<<"-----------------"<<endl;
+            
+        for(a=10;a>=1;a--){
+        for(b=1;b<=a;b++){
+        cout<<"+";
+        }
+        cout<<endl;
+        }
+    cout<<"-----------------"<<endl;
     
     //Exit stage!
     return 0;
