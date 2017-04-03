@@ -18,24 +18,12 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    int YrsInpt,
-        InchInpt;
+    int Orgnims=0;
     
     //Initialize variables
-    cout<<"Years Calculated = ";
-    cin>>YrsInpt;
     
     //Input data
-    for(int Yrs=1;Yrs<=YrsInpt;Yrs++){
-        cout<<Yrs<<endl;
-            
-        for(int Inch=1;Inch<=InchInpt;Inch++){
-            cout<<"Inches a Month = ";
-            cin>>InchInpt;
-            Yrs+=Inch;
-            cout<<Inch<<endl;
-        }
-    }
+    
     
     //Map inputs to outputs or process the data
     

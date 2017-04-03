@@ -7,6 +7,7 @@
 
 //System Libraries
 #include <iostream>  //Input - Output Library
+#include <cmath>
 using namespace std; //Name-space under which system libraries exist
 
 //User Libraries
@@ -18,27 +19,18 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    int YrsInpt,
-        InchInpt;
+    int Days=1,
+        DaysDsrd;
     
     //Initialize variables
-    cout<<"Years Calculated = ";
-    cin>>YrsInpt;
-    
-    //Input data
-    for(int Yrs=1;Yrs<=YrsInpt;Yrs++){
-        cout<<Yrs<<endl;
+    cout<<"Number of Days = ";
+    cin>>DaysDsrd;
             
-        for(int Inch=1;Inch<=InchInpt;Inch++){
-            cout<<"Inches a Month = ";
-            cin>>InchInpt;
-            Yrs+=Inch;
-            cout<<Inch<<endl;
-        }
+    //Input data
+    for(int Days=1;Days<=DaysDsrd;Days++){
+        cout<<"Day "<<Days<<" Earned $"<<(pow(2,Days))*.01<<endl;
     }
-    
-    //Map inputs to outputs or process the data
-    
+
     //Output the transformed data
     
     //Exit stage!

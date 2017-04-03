@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on March 29, 2017, 9:10 PM
- * Purpose:
+ * Created on March 9, 2017, 4:00 PM
+ * Purpose: Degree Calculations
  */
 
 //System Libraries
@@ -18,28 +18,20 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    int YrsInpt,
-        InchInpt;
+    float F,        //Fahrenheit
+          C;      //Celsius
     
     //Initialize variables
-    cout<<"Years Calculated = ";
-    cin>>YrsInpt;
-    
-    //Input data
-    for(int Yrs=1;Yrs<=YrsInpt;Yrs++){
-        cout<<Yrs<<endl;
+    cout<<"Celsius = ";
+    cin>>C;     
             
-        for(int Inch=1;Inch<=InchInpt;Inch++){
-            cout<<"Inches a Month = ";
-            cin>>InchInpt;
-            Yrs+=Inch;
-            cout<<Inch<<endl;
-        }
-    }
+    //Input data
+    F=32+1.8*C;
     
     //Map inputs to outputs or process the data
     
     //Output the transformed data
+    cout<<"Fahrenheit = "<<F<<" degrees"<<endl;
     
     //Exit stage!
     return 0;
