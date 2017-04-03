@@ -21,15 +21,16 @@ int main(int argc, char** argv) {
     cout<<"Pattern A            Pattern B"<<endl;
     cout<<"------------------------------"<<endl;
     
-    //Output the transformed data
-    for(int row=1;row<=10;row++)
-        for(int Star=1;Star<=10;Star++){
-            cout<<"*                    *"<<endl;
-            if (Star=10)
-                break;
-        }
+    //output
+    int n=10;
+    
+    for (int y = 1; y <= n; y++){
+    for (int x = 1; x <= n; x++)
+    if ((x == y) || (y == x)) cout << " ";
+    else cout << "+";
+    cout << endl;
+    }
     
     //Exit stage!
     return 0;
 }
-
