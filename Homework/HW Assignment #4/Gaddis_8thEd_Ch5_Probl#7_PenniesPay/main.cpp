@@ -27,9 +27,15 @@ int main(int argc, char** argv) {
     cin>>DaysDsrd;
             
     //Input data
-    for(int Days=1;Days<=DaysDsrd;Days++){
-        cout<<"Day "<<Days<<" Earned $"<<(pow(2,Days))*.01<<endl;
-    }
+    if (DaysDsrd<0){
+        cout<<"Invalid Input for Days."<<endl;
+    }        
+        else for(int Days=0;Days<2;Days++){
+                cout<<"Day "<<Days<<" Earned $"<<((pow(2,Days))*.01)-.01<<endl;
+                }
+                for(int Days=2;Days<=DaysDsrd;Days++){
+                    cout<<"Day "<<Days<<" Earned $"<<((pow(2,Days))/2)*.01<<endl;
+                }
 
     //Output the transformed data
     

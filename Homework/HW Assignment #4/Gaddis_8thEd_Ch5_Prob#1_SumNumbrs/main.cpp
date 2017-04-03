@@ -18,8 +18,7 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    int num=1,
-        DNum,
+    int DNum,
         sum;
 
     //Input data
@@ -30,9 +29,7 @@ int main(int argc, char** argv) {
     cout<<"If you were to add all integers from 1 to "<<sum<<endl;
     
     //Output the transformed data
-    for(num=1;num<=sum;num++){
-        DNum=(n(n+1))/2;
-    }
+    DNum=sum*(sum+1)/2;
     
     cout<<"You would get = "<<DNum<<endl;
     

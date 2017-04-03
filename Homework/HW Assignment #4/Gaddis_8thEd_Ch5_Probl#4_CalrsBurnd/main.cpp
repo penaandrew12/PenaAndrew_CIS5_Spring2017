@@ -24,6 +24,7 @@ int main(int argc, char** argv) {
     //Input data
     cout<<"This Program will determine how many calories are burned per 5 minutes."<<endl;
     cout<<"It will start at 5 minutes and increment by 5 up to 30 minutes."<<endl;
+    cout<<"It will use 3.6 Calories burned per minute."<<endl;
             
     for(Min=5;Min<=30;Min+=Incrmnt){
         cout<<"In "<<Min<<" Minutes "<<(Min*3.6)<<" Calories will be Burned"<<endl;
