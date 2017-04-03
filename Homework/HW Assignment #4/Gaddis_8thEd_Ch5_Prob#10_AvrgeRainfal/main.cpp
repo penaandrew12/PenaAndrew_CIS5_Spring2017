@@ -26,6 +26,7 @@ int main(int argc, char** argv) {
     //Number of Years
     cout<<"This Program will Calculate The Average Inch of Rain Per Month Each Year."<<endl;
     cout<<"Must Enter Year as Whole Number, If Year is not complete just fill with 0 until complete."<<endl;
+    cout<<"If Year is anything other than a whole number, Program will not work."<<endl;
     cout<<"Number of Years = ";
     cin>>YrsInpt;
     if(YrsInpt<=0)
@@ -38,7 +39,7 @@ int main(int argc, char** argv) {
             total+=InchInpt;
         }  
         average=total/(12);
-        cout<<"The Average Inch of Rain for Year "<<Yrs;
+        cout<<"The Average Inch of Rain Per Month for Year "<<Yrs;
         cout<<" is "<<average<<" Inches"<<endl<<endl<<endl;
     }
     
