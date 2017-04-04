@@ -7,6 +7,8 @@
 
 //System Libraries
 #include <iostream>  //Input - Output Library
+#include <cmath>    //Power
+#include <iomanip>  //Format
 using namespace std; //Name-space under which system libraries exist
 
 //User Libraries
@@ -29,10 +31,10 @@ int main(int argc, char** argv) {
         cout<<"Type 3 for Problem 4"<<endl;
         cout<<"Type 4 for Problem 5"<<endl;
         cout<<"Type 5 for Problem 6"<<endl;
-        cout<<"Type 6 for Problem "<<endl;
-        cout<<"Type 7 for Problem "<<endl;
-        cout<<"Type 8 for Problem "<<endl;
-        cout<<"Type 9 for Problem "<<endl<<endl;
+        cout<<"Type 6 for Problem 7"<<endl;
+        cout<<"Type 7 for Problem 10"<<endl;
+        cout<<"Type 8 for Problem 12"<<endl;
+        cout<<"Type 9 for Problem 23"<<endl<<endl;
         
         //Input Choice
         cin>>choice;
@@ -137,19 +139,99 @@ int main(int argc, char** argv) {
                 break;
             }
             case '6':{
-                cout<<"In Problem Solution 6"<<endl;
+                int Days=1,
+                    DaysDsrd;
+
+                //Initialize variables
+                cout<<"Number of Days = ";
+                cin>>DaysDsrd;
+
+                //Input data
+                if (DaysDsrd<0){
+
+               cout<<"Invalid Input for Days."<<endl;
+                }        
+                    else for(int Days=0;Days<2;Days++){
+                            cout<<"Day "<<Days<<" Earned $"<<((pow(2,Days))*.01)-.01<<endl;
+                            }
+                            for(int Days=2;Days<=DaysDsrd;Days++){
+                                cout<<"Day "<<Days<<" Earned $"<<((pow(2,Days))/2)*.01<<endl;
+                            }
                 break;
             }
             case '7':{
-                cout<<"In Problem Solution 7"<<endl;
+                int YrsInpt;
+                float total,
+                      average,
+                      InchInpt;
+
+                //Number of Years
+                cout<<"This Program will Calculate The Average Inch of Rain Per Month Each Year."<<endl;
+                cout<<"Must Enter Year as Whole Number, If Year is not complete just fill with 0 until complete."<<endl;
+                cout<<"If Year is anything other than a whole number, Program will not work."<<endl;
+                cout<<"Number of Years = ";
+                cin>>YrsInpt;
+                if(YrsInpt<=0)
+                cout<<"Invalid Input"<<endl;
+
+                else for(int Yrs=1;Yrs<=YrsInpt;Yrs++){
+                    for(int Mnth=1;Mnth<=12;Mnth++){
+                        cout<<"Enter Year "<<Yrs<<", Month "<<Mnth<<", Amount of Rain in Inches."<<endl;
+                        cin>>InchInpt;
+                        total+=InchInpt;
+                    }  
+                    average=total/(12);
+                    cout<<"The Average Inch of Rain Per Month for Year "<<Yrs;
+                    cout<<" is "<<average<<" Inches"<<endl<<endl<<endl;
+                }
                 break;
             }
             case '8':{
-                cout<<"In Problem Solution 8"<<endl;
+                float F,  //Fahrenheit
+                      C;  //Celsius
+
+                //Initialize variables
+                cout<<"This Program will Display a Table from 0 to 20 Degrees Celsius and convert it to Fahrenheit."<<endl;
+                cout<<"Hit Enter For Table,"<<endl;
+                cin.get();
+                cout<<"Celsius        Fahrenheit"<<endl;
+                cout<<"-------------------------"<<endl;
+
+                //Output the transformed data
+                for(int C=0;C<=9;C++){
+                    F=32+1.8*C;
+                    cout<<C<<"              "<<F<<endl;
+                }
+                for(int C=10;C<=20;C++){
+                    F=32+1.8*C;
+                    cout<<C<<"             "<<F<<endl;
+                }    
                 break;
             }
             case '9':{
-                cout<<"In Problem Solution 9"<<endl;
+                int a,b,x,y;
+                cout<<"Pattern A    "<<endl;
+                cout<<"-----------------"<<endl;
+
+                //output
+                for(x=1;x<=10;x++){
+                for(y=1;y<=x;y++){
+                cout<<"+";
+                }
+                cout<<endl;
+                }
+                cout<<"-----------------"<<endl;
+
+                cout<<"Pattern B"<<endl;
+                cout<<"-----------------"<<endl;
+
+                    for(a=10;a>=1;a--){
+                    for(b=1;b<=a;b++){
+                    cout<<"+";
+                    }
+                    cout<<endl;
+                    }
+                cout<<"-----------------"<<endl;
                 break;
             }
             default:{

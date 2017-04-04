@@ -28,7 +28,8 @@ int main(int argc, char** argv) {
             
     //Input data
     if (DaysDsrd<0){
-        cout<<"Invalid Input for Days."<<endl;
+     
+   cout<<"Invalid Input for Days."<<endl;
     }        
         else for(int Days=0;Days<2;Days++){
                 cout<<"Day "<<Days<<" Earned $"<<((pow(2,Days))*.01)-.01<<endl;
