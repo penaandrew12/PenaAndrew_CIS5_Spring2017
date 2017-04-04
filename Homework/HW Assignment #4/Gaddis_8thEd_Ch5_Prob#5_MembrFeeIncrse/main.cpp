@@ -18,9 +18,9 @@ using namespace std; //Name-space under which system libraries exist
 //Execution begins here
 int main(int argc, char** argv) {
     //Declare variables
-    int CrrntChrge=2500,
-        Yr=1;
-    float MembrShipFee=.04f;
+    int Yr=1;
+    float MembrShipFee=.04f,
+          CrrntChrge=2500;
     
     //Input data
     cout<<"Current Membership Cost $2500. Each Year it will increase by 4%. "
