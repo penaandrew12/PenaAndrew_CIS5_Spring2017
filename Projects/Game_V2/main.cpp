@@ -25,10 +25,10 @@ int main(int argc, char** argv) {
     //Set the random number seed
     string Name;
     char ans;   //Answer to play again
-    int RndmNum, //Random Number   
-        i,      //For loop
-        MrblsTkn; //Marbles Taken By player
-    float num=0;  //Random Number
+    int RndmNum=0, //Random Number   
+        i=0,      //For loop
+        MrblsTkn=0; //Marbles Taken By player
+    float num=0;  //Random Number Generator
     int Mrbls=0; //Symbols marbles for the materials for game (First Game Starts at 12)
  
     cout<<"Please Enter Name = ";
@@ -46,7 +46,6 @@ int main(int argc, char** argv) {
     do {
     
     num=(rand()% 100)+16; 
-    num=pow(num,2);
     
     Mrbls=num;
     Mrbls=static_cast<int>(Mrbls);

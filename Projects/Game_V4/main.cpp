@@ -2,14 +2,13 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on March 30, 2017, 5:40 PM
- * Purpose: Version 3 of Game. Had difficulty with Input and Output from outside.
+ * Purpose: Version 4 of Game
  */
 
 //System Libraries 
 #include <iostream>  //Main Library
 #include <cmath>     //Power Function
 #include <iomanip>  //Format
-#include <fstream> //File I/O
 #include <cstdlib>  //Random Number Generator
 using namespace std;
 
@@ -23,23 +22,14 @@ using namespace std;
 
 //Program Execution Begins
 int main(int argc, char** argv) {
-   
-    ifstream in;  //Input File
-    ofstream out; //Output File
-    string Name;
+    //Set the random number seed
+    string Name;    //Name
     char ans;   //Answer to play again
-    int RndmNum, //Random Number  
-        Loss,  //Number of losses
-        Input,  //Input from Text Document
+    int RndmNum, //Random Number   
         i,      //For loop
         MrblsTkn; //Marbles Taken By player
     float num=0;  //Random Number
     int Mrbls=0; //Symbols marbles for the materials for game (First Game Starts at 12)
-   
-    string Game_V3_Input="Game_V3_Input.md";   //String Name
-    char Game_V3_Output[]="Game_V3_Output.md"; //Character Array Name
-    in.open(Game_V3_Input.c_str());  //Open the Input file
-    out.open(Game_V3_Output); //Open the Output file
  
     cout<<"Please Enter Name = ";
     cin>>Name;
@@ -53,37 +43,42 @@ int main(int argc, char** argv) {
     cin.get();
     cin.ignore();
     
-    while(in>>Loss)
-        
     do {
+ 
+    num=(rand()% 100)+16; 
     
-    Mrbls=Input;
+    Mrbls=num;
+    Mrbls=static_cast<int>(Mrbls);
     
     cout<<"The Game will play with "<<Mrbls<<" Marbles"<<endl;
     
-    if (Mrbls%4==0){
+    if (Mrbls%3==0){
         RndmNum=(rand()% 3)+1;
         cout<<"The Computer takes "<<RndmNum<<" Marble(s)."<<endl;
         Mrbls=Mrbls-RndmNum;
         cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
         }
-    else if ((Mrbls-1)%4==0){
+    else if ((Mrbls-1)%3==0){
         cout<<"The Computer takes 1 Marble."<<endl;
         Mrbls=Mrbls-1;
         cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
         }
-        else if ((Mrbls-2)%4==0){
-            cout<<"The Computer takes 2 Marble."<<endl;
+        else if ((Mrbls-2)%3==0){
+            cout<<"The Computer takes 2 Marbles."<<endl;
             Mrbls=Mrbls-2;
             cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
             }
             else if ((Mrbls-3)%4==0){
-                cout<<"The Computer takes 3 Marble."<<endl;
+                cout<<"The Computer takes 3 Marbles."<<endl;
                 Mrbls=Mrbls-3;
                 cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
                 }
+            else cout<<"The Computer takes 3 Marbles."<<endl;
+                Mrbls=Mrbls-3;
+                cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
     
-    while (Mrbls>4){
+    
+    while (Mrbls<4);{
     
     cout<<"Enter The Amount of Marbles you wish to take for Your Turn = ";
     cin>>MrblsTkn;
@@ -110,12 +105,12 @@ int main(int argc, char** argv) {
         cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
         }
         else if ((Mrbls-2)%4==0){
-            cout<<"The Computer takes 2 Marble."<<endl;
+            cout<<"The Computer takes 2 Marbles."<<endl;
             Mrbls=Mrbls-2;
             cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
             }
             else if ((Mrbls-3)%4==0){
-                cout<<"The Computer takes 3 Marble."<<endl;
+                cout<<"The Computer takes 3 Marbles."<<endl;
                 Mrbls=Mrbls-3;
                 cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
                 }
@@ -149,9 +144,6 @@ int main(int argc, char** argv) {
     
     while (ans=='Y'||ans=='y');
     
-    in.close();
-    out.close();
-
     //Exit Stage
     return 0;
 }
