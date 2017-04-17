@@ -7,10 +7,9 @@
 
 //System Libraries 
 #include <iostream>  //Main Library
-#include <ctime>     //Time for rand
-#include <cstdlib>   //Srand to set the seed
-#include <fstream>   //File I/O
-#include <iomanip>   //Format
+#include <cmath>     //Power Function
+#include <iomanip>  //Format
+#include <cstdlib>  //Random Number Generator
 using namespace std;
 
 //User Libraries 
@@ -24,7 +23,6 @@ using namespace std;
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Set the random number seed
-    srand(static_cast<unsigned int>(time(0)));
     string Name;
     char ans;   //Answer to play again
     int RndmNum, //Random Number   
@@ -47,11 +45,12 @@ int main(int argc, char** argv) {
     
     do {
     
-    num=(rand()% 100)+16;   
-    cout<<fixed<<setprecision(3)<<showpoint;
+    num=(rand()% 100)+16; 
+    num=pow(num,2);
     
     Mrbls=num;
-            
+    Mrbls=static_cast<int>(Mrbls);
+    
     cout<<"The Game will play with "<<Mrbls<<" Marbles"<<endl;
     
     if (Mrbls%4==0){
@@ -114,18 +113,20 @@ int main(int argc, char** argv) {
                 }
     }
     
+
+    
     cout<<"Enter The Amount of Marbles you wish to take for the Next Turn = ";
     cin>>MrblsTkn;
-
-    Mrbls=Mrbls-MrblsTkn;
-    cout<<"You have taken "<<MrblsTkn<<" Marble(s). There are ";
-    cout<<Mrbls<<" Marble(s) Left."<<endl;
-
+    
     if(!(MrblsTkn==1||MrblsTkn==2||MrblsTkn==3)){
         cout<<"Invalid Input. The Computer Follows the Rules of the Game, which "
                 "if not are not followed, it can not work properly."<<endl;
         return 1;  //Use of DeMorgans law to make clear
     }
+    
+    Mrbls=Mrbls-MrblsTkn;
+    cout<<fixed<<setprecision(3)<<showpoint;
+    cout<<endl<<"During the game there was a total of "<<setw(1)<<num<<" Marbles. There is now "<<Mrbls<<" Left."<<endl;
     
         if (Mrbls=1,Mrbls=2,Mrbls=3){
             cout<<"The Computer Takes the Last Marble(s)."<<endl<<endl;
