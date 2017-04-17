@@ -2,13 +2,14 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on March 30, 2017, 5:40 PM
- * Purpose: Version 2 of Game
+ * Purpose: Version 3 of Game
  */
 
 //System Libraries 
 #include <iostream>  //Main Library
 #include <cmath>     //Power Function
 #include <iomanip>  //Format
+#include <fstream> //File I/O
 #include <cstdlib>  //Random Number Generator
 using namespace std;
 
@@ -22,7 +23,9 @@ using namespace std;
 
 //Program Execution Begins
 int main(int argc, char** argv) {
-    //Set the random number seed
+   
+    ifstream in;  //Input File
+    ofstream out; //Output File
     string Name;
     char ans;   //Answer to play again
     int RndmNum, //Random Number   
@@ -30,6 +33,9 @@ int main(int argc, char** argv) {
         MrblsTkn; //Marbles Taken By player
     float num=0;  //Random Number
     int Mrbls=0; //Symbols marbles for the materials for game (First Game Starts at 12)
+    
+    in.open(Game_V3_Input.c_str());  //Open the Input file
+    out.open(Game_V3_Output); //Open the Output file
  
     cout<<"Please Enter Name = ";
     cin>>Name;
@@ -141,6 +147,9 @@ int main(int argc, char** argv) {
     
     while (ans=='Y'||ans=='y');
     
+    in.close();
+    out.close();
+
     //Exit Stage
     return 0;
 }
