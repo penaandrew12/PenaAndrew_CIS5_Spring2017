@@ -28,12 +28,15 @@ int main(int argc, char** argv) {
     
     //Variables Set for Program
     string Name;
-    char ans;   //Answer to play again
+    char Input,
+         ans;   //Answer to play again
     int RndmNum=0, //Random Number   
         i=0,      //For loop
         MrblsTkn=0; //Marbles Taken By player
     float num=0;  //Random Number Generator
     int Mrbls=0; //Symbols marbles for the materials for game (First Game Starts at 12)
+    bool a=true,
+         b=false;
  
     //Display for Programs, States Rules, and allows user to have a winnable chance.  
     cout<<"Please Enter Name = ";
@@ -56,13 +59,29 @@ int main(int argc, char** argv) {
     //Random Number Generator Formula
     num=(rand()% 100)+16; 
     
+    
     //Random Amount of Marbles chosen to play game 
     Mrbls=num;
     //Conversion to turn float Marbles into an Integer
     Mrbls=static_cast<int>(Mrbls);
     
-    cout<<"The Game will play with "<<Mrbls<<" Marbles"<<endl;
+    cout<<"The Game will play with "<<Mrbls<<" Marbles"<<endl<<endl;
     
+    cout<<"Many have tried but have always failed. There is a secret to the game and if you do not know it the computer will always win."<<endl;
+    cout<<"You may enter a to make the game fair and winnable or choose b to have it show no mercy."<<endl;
+    cout<<"what will you decide?"<<endl;
+    cin>>Input;
+    
+    if (Input==a){
+        for (i<=4;i>=Mrbls;i--){
+        if (Mrbls%3==0)//Statement to take certain Random amount per turn
+        RndmNum=(rand()% 3)+1;
+        cout<<"The Computer takes "<<RndmNum<<" Marble(s)."<<endl;
+        Mrbls=Mrbls-RndmNum;
+        cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
+        }    
+    }
+    else if (!(Input==b)){
     //If/Else Statements to have computer choose what move to make
     if (Mrbls%4==0){    //Statement to take certain Random amount per turn
         RndmNum=(rand()% 3)+1;
@@ -80,11 +99,12 @@ int main(int argc, char** argv) {
             Mrbls=Mrbls-2;
             cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
             }
-        else if ((Mrbls-3)%4==0){   //Statement to take 3 Marbles per turn
-                cout<<"The Computer takes 3 Marble."<<endl;
-                Mrbls=Mrbls-3;
-                cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
-                }
+            else if ((Mrbls-3)%4==0){   //Statement to take 3 Marbles per turn
+                    cout<<"The Computer takes 3 Marble."<<endl;
+                    Mrbls=Mrbls-3;
+                    cout<<"There are "<<Mrbls<<" Marbles Left."<<endl<<endl;
+                    }
+    }
     
     //loop for the program to keep going until only 4 marbles are left
     while (Mrbls>4){
