@@ -7,7 +7,8 @@
 
 //System Libraries 
 #include <iostream>
-#include <cmath>    //Math Library
+#include <cmath> //Math Library
+#include <iomanip> //Format Library 
 using namespace std;
 
 //User Libraries 
@@ -16,32 +17,34 @@ using namespace std;
 //Like PI, e, Gravity, or conversions
 
 //Function Prototypes
-float KinEngy(float,float);
+float Temp(float);
 
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Declare all Variables
-    float E=0,  //Energy
-          m=0; //Mass in Kilograms
-    float v=0; //Velocity of Object
+    float F=0,  //Falling Distance
+          Fahr=0; //Time in Seconds
           
-    cout<<"Enter the Mass of the Object in Kilograms."<<endl;      
-    cin>>m;
-    cout<<"Enter the Velocity of the Object in m/s."<<endl;      
-    cin>>v;
+    cout<<"Enter the Amount of Second The Object takes to fall."<<endl;      
+    cin>>Fahr;
     
     //Draw from Function
-    E=KinEngy(m,v);
-    cout<<"The Moving Objects Kinetic Energy is "<<E<<endl;
-            
+    cout<<"Fahrenheit       Celsius"<<endl;
+    cout<<"------------------------"<<endl;
+    F=Temp(Fahr);
+    
     //Exit Stage
     return 0;
 
 }
 
-float KinEngy(float a,float b){
-    float c; //Distance
-    c=0.5f*a*pow(b,2);
-    return c;
+float Temp(float t){
+    float C; //Distance
+    for(float F=0;F<=t;F++){
+    C=(5*(F-32))/9;
+    cout<<setw(5)<<F<<setw(19)<<C<<endl;
+    }
+    return C;
 }
+
 
