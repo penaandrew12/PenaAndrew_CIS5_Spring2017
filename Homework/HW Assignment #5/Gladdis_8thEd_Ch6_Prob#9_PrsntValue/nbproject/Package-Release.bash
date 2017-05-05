@@ -7,15 +7,15 @@
 # Macros
 TOP=`pwd`
 CND_PLATFORM=Cygwin-Windows
-CND_CONF=Debug
+CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gladdis_8thed_ch6_prob_6_kinenergy
-OUTPUT_BASENAME=gladdis_8thed_ch6_prob_6_kinenergy
-PACKAGE_TOP_DIR=gladdis8thedch6prob#6kinenergy/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gladdis_8thed_ch6_prob_9_prsntvalue
+OUTPUT_BASENAME=gladdis_8thed_ch6_prob_9_prsntvalue
+PACKAGE_TOP_DIR=gladdis8thedch6prob#9prsntvalue/
 
 # Functions
 function checkReturnCode
@@ -60,15 +60,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/gladdis8thedch6prob#6kinenergy/bin"
+makeDirectory "${NBTMPDIR}/gladdis8thedch6prob#9prsntvalue/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/gladdis8thedch6prob#6kinenergy.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/gladdis8thedch6prob#9prsntvalue.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/gladdis8thedch6prob#6kinenergy.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/gladdis8thedch6prob#9prsntvalue.tar *
 checkReturnCode
 
 # Cleanup
