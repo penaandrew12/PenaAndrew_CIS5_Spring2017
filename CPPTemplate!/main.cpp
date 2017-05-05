@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on April 04, 2017, 11:30 AM
- * Purpose:
+ * Purpose: 
  */
 
 //System Libraries 
@@ -19,14 +19,7 @@ using namespace std;
 
 //Program Execution Begins
 int main(int argc, char** argv) {
-    //Declare all Variables
-    
-    //Input or initialize values
-    
-    //Process/Calculations
-    
-    //Output Located
-
+        
     //Exit Stage
     return 0;
 }
