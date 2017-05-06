@@ -1,8 +1,8 @@
  /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on May 03, 2017, 11:30 AM
- * Purpose: Mark-Up
+ * Created on May 05, 2017, 5:00 PM
+ * Purpose: Coin-Toss
  */
 
 //System Libraries 
@@ -27,8 +27,8 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int>(time(0)));
     
     //Declare all Variables
-    float T=0,  //Falling Distance
-          Flip=0; //Time in Seconds
+    float T=0,  //Turn Table
+          Flip=0; //Turns for Flip
     
     cout<<"Enter the Amount of Times you Wish to Flip the Coin."<<endl;      
     cin>>Flip;

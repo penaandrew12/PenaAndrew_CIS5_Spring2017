@@ -1,8 +1,8 @@
  /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on May 03, 2017, 11:30 AM
- * Purpose: Mark-Up
+ * Created on May 05, 2017, 3:00 PM
+ * Purpose: Falling Distance
  */
 
 //System Libraries 
@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
 }
 
 float Distance(float t,float b){
-    float a; //Distance
+    float a; //Distance Traveled
     for(int sec=1;sec<=t;sec++){
     a=0.5f*b*pow(sec,2);
     cout<<sec<<" Second(s). Object has fallen "<<a<<" Meter(s)"<<endl;

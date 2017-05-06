@@ -1,8 +1,8 @@
  /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on May 03, 2017, 11:30 AM
- * Purpose: Mark-Up
+ * Created on May 05, 2017, 4:40 PM
+ * Purpose: Temperature Table
  */
 
 //System Libraries 
@@ -22,8 +22,8 @@ float Temp(float);
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Declare all Variables
-    float F=0,  //Falling Distance
-          Fahr=0; //Time in Seconds
+    float F=0,  //Function Test
+          Fahr=0; //Fahrenheit
           
     cout<<"Enter the Amount of Second The Object takes to fall."<<endl;      
     cin>>Fahr;
@@ -39,9 +39,9 @@ int main(int argc, char** argv) {
 }
 
 float Temp(float t){
-    float C; //Distance
+    float C; //Celsius
     for(float F=0;F<=t;F++){
-    C=(5*(F-32))/9;
+    C=(5*(F-32))/9;  //Celsius Conversion from Fahrenheit
     cout<<setw(5)<<F<<setw(19)<<C<<endl;
     }
     return C;

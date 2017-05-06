@@ -1,8 +1,8 @@
  /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on May 03, 2017, 11:30 AM
- * Purpose: Mark-Up
+ * Created on May 05, 2017, 5:30 PM
+ * Purpose: Determine Whether Number is Prime or Not
  */
 
 //System Libraries 
@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
     cout<<"Enter an Integer"<<endl;      
     cin>>num;
     
+    //If Number is Invalid Error 
     if (num<=0){
         cout<<"Error"<<endl;
         return 0;

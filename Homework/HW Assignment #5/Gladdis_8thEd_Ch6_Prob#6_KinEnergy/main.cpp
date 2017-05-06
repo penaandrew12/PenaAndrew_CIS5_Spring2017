@@ -1,8 +1,8 @@
  /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on May 03, 2017, 11:30 AM
- * Purpose: Mark-Up
+ * Created on May 05, 2017, 4:20 PM
+ * Purpose: Kinetic Energy
  */
 
 //System Libraries 
@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
 }
 
 float KinEngy(float a,float b){
-    float c; //Distance
+    float c; //Kinetic Energy
     c=0.5f*a*pow(b,2);
     return c;
 }

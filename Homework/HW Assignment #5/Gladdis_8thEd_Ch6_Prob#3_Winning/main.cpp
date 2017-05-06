@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on May 03, 2017, 11:30 AM
- * Purpose: Mark-Up
+ * Created on May 05, 2017, 2:45 PM
+ * Purpose: Winning Division Numbers
  */
 
 //System Libraries 
@@ -68,16 +68,16 @@ int main(int argc, char** argv) {
 
 float findHighest(float a, float b, float c, float d){
     
-    if(a>=b&&a>=c&&a>=d){
+    if(a>=b&&a>=c&&a>=d){ //If a is greatest number show
     cout<<a<<". North Division Had the Highest Quarter Sales.";
     }
-    if(b>=a&&b>=c&&b>=d){
+    if(b>=a&&b>=c&&b>=d){ //If b is greatest number show
     cout<<b<<". South Division Had the Highest Quarter Sales.";
     }
-    if(c>=a&&c>=b&&c>=d){
+    if(c>=a&&c>=b&&c>=d){ //If c is greatest number show
     cout<<c<<". East Division Had the Highest Quarter Sales.";
     }
-    if(d>=a&&d>=b&&d>=c){
+    if(d>=a&&d>=b&&d>=c){ //If d is greatest number show
     cout<<d<<". West Division Had the Highest Quarter Sales.";
     }
 }
