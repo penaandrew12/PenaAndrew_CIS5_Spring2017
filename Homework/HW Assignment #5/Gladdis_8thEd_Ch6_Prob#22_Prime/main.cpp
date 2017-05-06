@@ -7,7 +7,6 @@
 
 //System Libraries 
 #include <iostream>
-#include <iomanip> //Format Library
 using namespace std;
 
 //User Libraries 
@@ -21,39 +20,39 @@ int Prime(int);
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Declare all Variables
-    int num=0; //Number
+    int num=0, //Number
+        p=0; //Value for Prime or not Prime
     
-    cout<<"This program shows if number is prime or not."<<endl;
-    cout<<"If an integer number is not greater than 0 error will output."<<endl;
+    cout<<"This program shows if a number is prime or not."<<endl;
+    cout<<"If the number is not greater than 0 or a real integer, an error will output."<<endl;
     cout<<"Enter an Integer"<<endl;      
     cin>>num;
     
     if (num<=0){
         cout<<"Error"<<endl;
+        return 0;
     }
     
-    Prime(num);
+    p=Prime(num);
     
     //Exit Stage
     return 0;
 
 }
 
-int Prime(int a){
+int Prime(int n){
     bool isPrime = true;
-    for(int i = 2; i <= a / 2; ++i){
-        bool isPrime = true;
-        if(a % i == 0){
-        isPrime = false;
-        break;
-        }
+    for(int i=2;i<=n/2;++i){
+      if(n%i==0){
+          isPrime = false;
+          break;
+      }
     }
-            if (isPrime==true){
-            cout << "This is a prime number";
-            }
-            else
-            cout << "This is not a prime number";
+    if (isPrime)
+      cout << "This is a prime number";
+    else
+      cout << "This is not a prime number";
     
-    return a;
+    return n;
 }
 

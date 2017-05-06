@@ -7,6 +7,7 @@
 
 //System Libraries 
 #include <iostream>
+#include <cmath> //Math Library
 #include <iomanip> //Format Library
 using namespace std;
 
@@ -17,46 +18,39 @@ using namespace std;
 const float PERCENT=100.0f; //Conversion to Percent
 
 //Function Prototypes
-float Poplutn(float,float,float,float);
+float FutureVal(float,float,float);
 
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Declare all Variables
-    float Start=0, //starting Population
-          Brth=0, //Birth Rate
-          Death=0, //Death Rate
-          Yrs=0, //Number of years
-          N=0; //New Population Size
+    float fv=0, //Future Value
+          ir=0, //Interest Rate
+          mnths=0, //Year
+          pv=0; //Present Value
           
-    cout<<"Enter Starting size of Population"<<endl;      
-    cin>>Start;
-    cout<<"Enter Birth Rate"<<endl;      
-    cin>>Brth;
-    cout<<"Enter Death Rate"<<endl;      
-    cin>>Death;
-    cout<<"Enter the number of Years"<<endl;      
-    cin>>Yrs;
+    cout<<"Enter Present Value in $/s"<<endl;      
+    cin>>pv;
+    cout<<"Enter Interest Rate"<<endl;      
+    cin>>ir;
+    cout<<"Enter the number of months"<<endl;      
+    cin>>mnths;
     
-    Brth=Brth/PERCENT;
-    Death=Death/PERCENT;
+    cout<<fixed<<setprecision(2)<<endl;
+    ir=ir/PERCENT;
     
-    cout<<"Year           Population"<<endl;
-    cout<<"-------------------------"<<endl;
     //Draw from Function
-    N=Poplutn(Start,Brth,Death,Yrs);
-    
+    fv=FutureVal(pv,ir,mnths);
+    cout<<"The Present Value needed, in order to live off interest, is $"<<fv<<endl;
+            
     //Exit Stage
     return 0;
 
 }
 
-float Poplutn(float a,float b,float c, float d){
-    float e;
-    for (int count=1;count<=d;count++){
-    float e;
-    e=a+a*b-a*c;
-    cout<<setw(2)<<count<<setw(20)<<e<<endl;
-    }
-    return e;
+float FutureVal(float a,float b,float c){
+    float d;
+    d=a*(pow((1+b),c));
+    return d;
 }
+
 

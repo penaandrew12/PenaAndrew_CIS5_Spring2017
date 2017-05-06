@@ -18,38 +18,45 @@ using namespace std;
 const float PERCENT=100.0f; //Conversion to Percent
 
 //Function Prototypes
-float FutureVal(float,float,float);
+float Poplutn(float,float,float,float);
 
 //Program Execution Begins
 int main(int argc, char** argv) {
     //Declare all Variables
-    float fv=0, //Future Value
-          ir=0, //Interest Rate
-          mnths=0, //Year
-          pv=0; //Present Value
+    float Start=0, //starting Population
+          Brth=0, //Birth Rate
+          Death=0, //Death Rate
+          Yrs=0, //Number of years
+          N=0; //New Population Size
           
-    cout<<"Enter Present Value in $/s"<<endl;      
-    cin>>pv;
-    cout<<"Enter Interest Rate"<<endl;      
-    cin>>ir;
-    cout<<"Enter the number of months"<<endl;      
-    cin>>mnths;
+    cout<<"Enter Starting size of Population"<<endl;      
+    cin>>Start;
+    cout<<"Enter Birth Rate"<<endl;      
+    cin>>Brth;
+    cout<<"Enter Death Rate"<<endl;      
+    cin>>Death;
+    cout<<"Enter the number of Years"<<endl;      
+    cin>>Yrs;
     
-    cout<<fixed<<setprecision(2)<<endl;
-    ir=ir/PERCENT;
+    Brth=Brth/PERCENT;
+    Death=Death/PERCENT;
     
+    cout<<"Year           Population"<<endl;
+    cout<<"-------------------------"<<endl;
     //Draw from Function
-    fv=FutureVal(pv,ir,mnths);
-    cout<<"The Present Value needed, in order to live off interest, is $"<<fv<<endl;
-            
+    N=Poplutn(Start,Brth,Death,Yrs);
+    
     //Exit Stage
     return 0;
 
 }
 
-float FutureVal(float a,float b,float c){
-    float d;
-    d=a*(pow((1+b),c));
-    return d;
+float Poplutn(float a,float b,float c, float d){
+    float e;
+    for (int count=1;count<=d;count++){
+    float e;
+    e=a+a*b-a*c;
+    cout<<setw(2)<<count<<setw(20)<<e<<endl;
+    }
+    return e;
 }
-
