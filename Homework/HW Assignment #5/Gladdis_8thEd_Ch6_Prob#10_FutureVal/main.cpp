@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
     
     //Draw from Function
     fv=FutureVal(pv,ir,mnths);
-    cout<<"The Present Value needed, in order to live off interest, is $"<<fv<<endl;
+    cout<<"The Future Value of "<<pv<<" at "<<ir*PERCENT<<"%, in "<<mnths<<" months is $"<<fv<<endl;
             
     //Exit Stage
     return 0;
