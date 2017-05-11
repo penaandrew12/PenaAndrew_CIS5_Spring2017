@@ -32,9 +32,7 @@ int main(int argc, char** argv) {
     
     //Input data Here
     filArry(array,SIZE);
-    
     mrkSort(array,SIZE);
-    
     prntArry(array,SIZE,10);
 
     
