@@ -34,17 +34,12 @@ int main(int argc, char** argv) {
     
     //Input data Here
     filArry(array,SIZE);
-    prntArry(array,SIZE,10);
     
     mrkSort(array,SIZE);
-            
-    //smlstVl(array,SIZE,0);
     
-    //swap2(array[0],array[SIZE-1]);//Test for swap 1 or 2
-    
-    //Output Located Here
     prntArry(array,SIZE,10);
 
+    
     //Exit
     return 0;
 }
