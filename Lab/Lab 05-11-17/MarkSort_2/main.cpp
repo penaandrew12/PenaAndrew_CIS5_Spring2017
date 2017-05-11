@@ -44,12 +44,12 @@ int main(int argc, char** argv) {
 
 void mrkSort(int a[],int n){
     for(int pos=0;pos<n-1;pos++){
-        for(int indx=pos+1;indx<n;indx++){
-            if(a[pos]>a[indx]){
-                int temp=a[pos];
-                a[pos]=a[indx];
-                a[indx]=temp;
-            }
+        for(int pos;pos<n;pos++){
+            if(a[pos]>a[pos])swap(a[pos],a[pos]);
+                int a=0,b=0,temp;
+                temp=a;
+                a=b;
+                b=temp;
         }
     }
 }
