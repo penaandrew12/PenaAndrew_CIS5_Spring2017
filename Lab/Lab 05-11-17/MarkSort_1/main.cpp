@@ -43,8 +43,8 @@ int main(int argc, char** argv) {
 }
 
 void mrkSort(int a[],int n){
-    for(int pos=0;pos<n-1;pos++){
-        for(int indx=pos+1;indx<n;indx++){
+    for(int pos=0;pos<n-1;pos++){  //Do every number
+        for(int indx=pos+1;indx<n;indx++){  //swap number with smallest
             if(a[pos]>a[indx]){
                 int temp=a[pos];
                 a[pos]=a[indx];
