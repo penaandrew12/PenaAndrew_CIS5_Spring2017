@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andrew Pena
- * Created on May 11, 2017, 10:20 AM
- * Purpose: Mark Sort
+ * Created on May 11, 2017, 11:20 AM
+ * Purpose: Mark Sort 1 Function
  */
 
 //System Libraries Here
@@ -20,7 +20,6 @@ using namespace std;
 void filArry(int [],int);  //Fills Array with number
 void prntArry(int[],int,int); //Print out results
 void swap1(int &,int &);
-void swap2(int &,int &);
 void smlstVl(int [],int,int);
 void mrkSort(int [],int);
 
@@ -58,7 +57,7 @@ void mrkSort(int a[],int n){
 
 void smlstVl(int a[],int n,int pos){
     for(int indx=pos;indx<n;indx++){
-        if(a[pos]>a[indx])swap2(a[pos],a[indx]);
+        if(a[pos]>a[indx])swap1(a[pos],a[indx]);
     }
 }
     
@@ -68,13 +67,6 @@ void swap1(int &a,int &b){
     temp=a;
     a=b;
     b=temp;
-}
-
-//Logical variable intermediate swap
-void swap2(int &a,int &b){
-    a=a^b;
-    b=a^b;
-    a=a^b;
 }
 
 void prntArry(int a[],int n,int perLine){
