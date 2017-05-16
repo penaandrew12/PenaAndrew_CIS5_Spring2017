@@ -39,10 +39,10 @@ int main(int argc, char** argv) {
         int v;
         v=input[i];
         if(v==n){
-        cout<<"Valid"<<endl;
+        cout<<"Spot "<<i+1<<" Valid"<<endl;
         } 
         else 
-            cout<<"Invalid"<<endl;
+            cout<<"Spot "<<i+1<<" Invalid"<<endl;
     }
     
     //Exit Stage
