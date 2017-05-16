@@ -98,7 +98,7 @@ void rdFile(char fn[],char a[],int s){
     in.close();
 }
 
-void rdFile(string fn,int a[],int s){
+void rdFile(string fn,char a[],int s){
     //Declare File variables
     ifstream in;
     int cnt=0;
@@ -107,7 +107,8 @@ void rdFile(string fn,int a[],int s){
     in.open(fn.c_str());
     
     //Read Values
-    while(in>>a[cnt++]);
+    while(in>>a[cnt++]&&cnt<s);
+    cout<<cnt<<endl;
     
     //Close File
     in.close();
