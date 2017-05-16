@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Sorting_1
+PROJECTNAME=Grading
 
 # Active Configuration
 DEFAULTCONF=Debug

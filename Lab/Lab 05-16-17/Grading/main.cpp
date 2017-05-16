@@ -17,6 +17,7 @@ using namespace std;
 
 //Function Prototypes Here
 void rdFile(string,char [],int); //Read the answer key and student response
+void rdFile(char,char [],int); //Read the answer key and student response
 void wrtFile(string,int [],int); //Write the results
 void Grde(char [],char [],int [],int); //Compare and grade
 int score(int[],int); //Numerical result
@@ -24,12 +25,27 @@ int score(int[],int); //Numerical result
 //Program Execution Begins Here
 int main(int argc, char** argv) {
     //Declare all Variables 
+    const int SIZE=20;
+    char key[SIZE],stuResp[SIZE];
+    int scr[SIZE];
+    string keyFn,stuRFn,scoreFn;
+    
+    //Initialize String Variables
+    keyFn="key.dat";
+    char keyFnC[]="key.dat";
+    stuRFn="answer.dat";
+    scoreFn="results.dat";
     
     //Input Data
+    rdFile(keyFnC,key,SIZE);
+    rdFile(stuRFn,stuResp,SIZE);
     
     //Map Input or process the data
+    Grde(key,stuResp,scr,SIZE);
     
     //Output the transformed data
+    cout<<"Your Test Results score was = "<<score(scr,SIZE)<<endl;
+    wrtFile(scoreFn,scr,SIZE);
     
     //Output Located Here
 
@@ -65,6 +81,21 @@ void Grde(char key[],char stu[],int pts[],int s){
     for(int i=0;i<s;i++){
         if(key[i]==stu[i])pts[i]=1;
     }
+}
+
+void rdFile(char fn[],char a[],int s){
+    //Declare File variables
+    ifstream in;
+    int cnt=0;
+    
+    //Open File
+    in.open(fn);
+    
+    //Read Values
+    while(in>>a[cnt++]);
+    
+    //Close File
+    in.close();
 }
 
 void rdFile(string fn,int a[],int s){

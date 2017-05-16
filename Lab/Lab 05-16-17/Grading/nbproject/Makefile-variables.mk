@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=sorting_1
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/sorting_1
+CND_ARTIFACT_NAME_Debug=grading
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/grading
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=sorting1.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/sorting1.tar
+CND_PACKAGE_NAME_Debug=grading.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/grading.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=sorting_1
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/sorting_1
+CND_ARTIFACT_NAME_Release=grading
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/grading
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=sorting1.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/sorting1.tar
+CND_PACKAGE_NAME_Release=grading.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/grading.tar
 #
 # include compiler specific variables
 #
