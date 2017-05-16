@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void wrtFile(string fn,int pts[],int s){
+void wrtFile(string fn,int pts[],int n){
     //Declare File variables
     ofstream out;
     
@@ -61,7 +61,7 @@ void wrtFile(string fn,int pts[],int s){
     out.open(fn.c_str());
     
     //Read Values
-    for(int i=0;i<s;i++){
+    for(int i=0;i<n;i++){
         out<<pts[i]<<endl;
     }
         
@@ -69,21 +69,21 @@ void wrtFile(string fn,int pts[],int s){
     out.close();
 }
 
-int score(int pts[],int s){
+int score(int pts[],int n){
     int sum=0;
-    for(int i=0;i<s;i++){
+    for(int i=0;i<n;i++){
         sum+=pts[i];
     }
     return sum;
 }
 
-void Grde(char key[],char stu[],int pts[],int s){
-    for(int i=0;i<s;i++){
+void Grde(char key[],char stu[],int pts[],int n){
+    for(int i=0;i<n;i++){
         if(key[i]==stu[i])pts[i]=1;
     }
 }
 
-void rdFile(char fn[],char a[],int s){
+void rdFile(char fn[],char a[],int n){
     //Declare File variables
     ifstream in;
     int cnt=0;
@@ -92,13 +92,13 @@ void rdFile(char fn[],char a[],int s){
     in.open(fn);
     
     //Read Values
-    while(in>>a[cnt++]);
+    while(in>>a[cnt++&&cnt<n]);
     
     //Close File
     in.close();
 }
 
-void rdFile(string fn,char a[],int s){
+void rdFile(string fn,char a[],int n){
     //Declare File variables
     ifstream in;
     int cnt=0;
@@ -107,8 +107,7 @@ void rdFile(string fn,char a[],int s){
     in.open(fn.c_str());
     
     //Read Values
-    while(in>>a[cnt++]&&cnt<s);
-    cout<<cnt<<endl;
+    while(in>>a[cnt++]&&cnt<n);
     
     //Close File
     in.close();
