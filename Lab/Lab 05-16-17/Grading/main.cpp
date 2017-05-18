@@ -17,7 +17,7 @@ using namespace std;
 
 //Function Prototypes Here
 void rdFile(string,char [],int); //Read the answer key and student response
-void rdFile(char,char [],int); //Read the answer key and student response
+void rdFile(char [],char [],int); //Read the answer key and student response
 void wrtFile(string,int [],int); //Write the results
 void Grde(char [],char [],int [],int); //Compare and grade
 int score(int[],int); //Numerical result
@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
     //Declare all Variables 
     const int SIZE=20;
     char key[SIZE],stuResp[SIZE];
-    int scr[SIZE];
+    int scr[SIZE]={};
     string keyFn,stuRFn,scoreFn;
     
     //Initialize String Variables
@@ -92,7 +92,7 @@ void rdFile(char fn[],char a[],int n){
     in.open(fn);
     
     //Read Values
-    while(in>>a[cnt++&&cnt<n]);
+    while(in>>a[cnt++]&&cnt<n);
     
     //Close File
     in.close();
