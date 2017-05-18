@@ -6,7 +6,7 @@
  */
 
 //System Libraries Here
-#include <iostream>
+#include <iostream> //Main Library
 #include <fstream> //Reading/Writing Files
 #include <vector> //STL Vector -> Dynamic Array
 using namespace std;
@@ -26,9 +26,9 @@ int score(vector<int> &); //Numerical result
 int main(int argc, char** argv) {
     //Declare all Variables 
     const int SIZE=20;
-    vector<char> key(SIZE);
-    vector<char> stuResp(SIZE);
-    vector<int> scr(SIZE);
+    vector<char> key(SIZE); //Answer Key for test
+    vector<char> stuResp(SIZE);  //Student Response text doc
+    vector<int> scr(SIZE);  //Score
     string scoreFn;
     
     //Initialize String Variables
@@ -37,15 +37,15 @@ int main(int argc, char** argv) {
     scoreFn="results.dat";
     
     //Input Data
-    rdFile(keyFnC,key);
-    rdFile(stuRFnC,stuResp);
+    rdFile(keyFnC,key); //Read file from key text doc
+    rdFile(stuRFnC,stuResp);    //Read file from answer text doc
     
     //Map Input or process the data
-    Grde(key,stuResp,scr);
+    Grde(key,stuResp,scr); //Calls from Function of Grading
     
     //Output the transformed data
     cout<<"Your Test Results score was = "<<score(scr)<<endl;
-    wrtFile(scoreFn,scr);
+    wrtFile(scoreFn,scr);  //Write File to Results doc
     
     //Output Located Here
 
