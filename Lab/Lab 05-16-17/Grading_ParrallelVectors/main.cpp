@@ -29,24 +29,23 @@ int main(int argc, char** argv) {
     vector<char> key(SIZE);
     vector<char> stuResp(SIZE);
     vector<int> scr(SIZE);
-    string keyFn,stuRFn,scoreFn;
+    string scoreFn;
     
     //Initialize String Variables
-    keyFn="key.dat";
     char keyFnC[]="key.dat";
-    stuRFn="answer.dat";
+    char stuRFnC[]="answer.dat";
     scoreFn="results.dat";
     
     //Input Data
-    rdFile(keyFnC,key,SIZE);
-    rdFile(stuRFn,stuResp,SIZE);
+    rdFile(keyFnC,key);
+    rdFile(stuRFnC,stuResp);
     
     //Map Input or process the data
-    Grde(key,stuResp,scr,SIZE);
+    Grde(key,stuResp,scr);
     
     //Output the transformed data
-    cout<<"Your Test Results score was = "<<score(scr,SIZE)<<endl;
-    wrtFile(scoreFn,scr,SIZE);
+    cout<<"Your Test Results score was = "<<score(scr)<<endl;
+    wrtFile(scoreFn,scr);
     
     //Output Located Here
 
@@ -93,7 +92,7 @@ void rdFile(char fn[],vector<char> &a){
     in.open(fn);
     
     //Read Values
-    while(in>>a[cnt++]&&cnt<n);
+    while(in>>a[cnt++]&&cnt<a.size());
     
     //Close File
     in.close();
