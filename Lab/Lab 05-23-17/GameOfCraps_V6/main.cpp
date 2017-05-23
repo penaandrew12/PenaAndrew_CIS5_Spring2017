@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on May 05, 2017, 11:40 AM
- * Purpose: implementing Arrays
+ * Purpose: Project 2
  */
 
 //System Libraries
@@ -21,10 +21,10 @@ using namespace std; //Name-space under which system libraries exist
 const float PERCENT=100.0f;//Conversion to Percent
 
 //Function Prototypes
-char rollDice(int);
-void fileDsp(ofstream &,int[],int[],int,int,int,int);
-void scrnDsp(int[],int[],int,int,int,int);
-void crpGame(int[],int[],int,int &,int &,int &);
+char rollDice(int);     //Roll Dice
+void fileDsp(ofstream &,int[],int[],int,int,int,int); //File Display
+void scrnDsp(int[],int[],int,int,int,int);      //Screen Display
+void crpGame(int[],int[],int,int &,int &,int &);    //Play Craps Game
 
 //Execution begins here
 int main(int argc, char** argv) {
