@@ -64,6 +64,12 @@ int main(int argc, char** argv) {
     //Close Files and Exit stage right!
     in.close();
     out.close();
+    
+    //Deallocate Memory
+    delete []wins;
+    delete []losses;
+    
+    //Exit Stage Right!
     return 0;
 }
 
