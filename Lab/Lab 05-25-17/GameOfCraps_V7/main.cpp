@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on May 25, 2017, 11:25 AM
- * Purpose: 
+ * Purpose: Implement Arrays with pointers
  */
 
 //System Libraries
@@ -22,9 +22,9 @@ const float PERCENT=100.0f;//Conversion to Percent
 
 //Function Prototypes
 char rollDice(int);     //Roll Dice
-void fileDsp(ofstream &,int[],int[],int,int,int,int); //File Display
-void scrnDsp(int[],int[],int,int,int,int);      //Screen Display
-void crpGame(int[],int[],int,int &,int &,int &);    //Play Craps Game
+void fileDsp(ofstream &,int*,int*,int,int,int,int); //File Display
+void scrnDsp(int*,int*,int,int,int,int);      //Screen Display
+void crpGame(int*,int*,int,int &,int &,int &);    //Play Craps Game
 
 //Execution begins here
 int main(int argc, char** argv) {
@@ -67,7 +67,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void crpGame(int wins[],int losses[],int SIZE,int &nGames,int &numThrw,int &mxThrw){
+void crpGame(int *wins,int *losses,int SIZE,int &nGames,int &numThrw,int &mxThrw){
    
     for(int game=1;game<=nGames;game++){ 
     //Throw dice and sum, keep track of number of throws in a game
@@ -76,10 +76,10 @@ void crpGame(int wins[],int losses[],int SIZE,int &nGames,int &numThrw,int &mxTh
         //Determine wins and losses
         switch(sum1){
             case  7:
-            case 11:wins[sum1]++;break;
+            case 11:(*(wins+sum1))++;break;
             case  2:
             case  3:
-            case 12:losses[sum1]++;break;
+            case 12:(*(losses+sum1))++;break;
             default:{
                 //Loop until a 7 or previous sum is thrown
                 bool thrwAgn=true;
@@ -88,10 +88,10 @@ void crpGame(int wins[],int losses[],int SIZE,int &nGames,int &numThrw,int &mxTh
                     char sum2=rollDice(6);
                     gmThrw++;//Increment the number of throws
                     if(sum2==7){
-                        losses[sum1]++;
+                        (*(losses+sum1))++;
                         thrwAgn=false;
                     }else if(sum1==sum2){
-                        wins[sum1]++;
+                        (*(wins+sum1))++;
                         thrwAgn=false;
                     }//end of dependent if-else
                 }while(thrwAgn);//end of do-while
@@ -103,15 +103,15 @@ void crpGame(int wins[],int losses[],int SIZE,int &nGames,int &numThrw,int &mxTh
     }
 }
 
-void fileDsp(ofstream &out,int wins[],int losses[],int SIZE,int nGames,int numThrw,int mxThrw){
+void fileDsp(ofstream &out,int *wins,int *losses,int SIZE,int nGames,int numThrw,int mxThrw){
     out<<fixed<<setprecision(2)<<showpoint;
     out<<"Total number of Games = "<<nGames<<endl;
     out<<"Role     Wins     Losses"<<endl;
     int sWins=0,sLosses=0;
     for(int sum=2;sum<SIZE;sum++){
-        sWins+=wins[sum];
-        sLosses+=losses[sum];
-        out<<setw(4)<<sum<<setw(10)<<wins[sum]<<setw(10)<<losses[sum]<<endl;
+        sWins+=*(wins+sum);
+        sLosses+=*(losses+sum);
+        out<<setw(4)<<sum<<setw(10)<<*(wins+sum)<<setw(10)<<*(losses+sum)<<endl;
     }
     out<<"Total wins and losses = "<<sWins+sLosses<<endl;
     out<<"Percentage wins       = "
@@ -119,20 +119,20 @@ void fileDsp(ofstream &out,int wins[],int losses[],int SIZE,int nGames,int numTh
     out<<"Percentage losses     = "
             <<static_cast<float>(sLosses)/nGames*PERCENT<<"%"<<endl;
     out<<"Maximum number of throws in a game = "<<mxThrw<<endl;
-    out<<"Average throw per game="<<static_cast<float>(numThrw)/nGames<<endl;
+    out<<"Average throw per game = "<<static_cast<float>(numThrw)/nGames<<endl;
     out<<"Ratio of Longest to shortest game = 10^"<<log10(mxThrw)<<endl;
 }
 
-void scrnDsp(int wins[],int losses[],int SIZE,int nGames,int numThrw,int mxThrw){
+void scrnDsp(int *wins,int *losses,int SIZE,int nGames,int numThrw,int mxThrw){
     //Output the game statistics to the screen
     cout<<fixed<<setprecision(2)<<showpoint;
     cout<<"Total number of Games = "<<nGames<<endl;
     cout<<"Role     Wins     Losses"<<endl;
     int sWins=0,sLosses=0;
     for(int sum=2;sum<SIZE;sum++){
-        sWins+=wins[sum];
-        sLosses+=losses[sum];
-        cout<<setw(4)<<sum<<setw(10)<<wins[sum]<<setw(10)<<losses[sum]<<endl;
+        sWins+=*(wins+sum);
+        sLosses+=*(losses+sum);
+        cout<<setw(4)<<sum<<setw(10)<<*(wins+sum)<<setw(10)<<*(losses+sum)<<endl;
     }
     cout<<"Total wins and losses = "<<sWins+sLosses<<endl;
     cout<<"Percentage wins       = "
