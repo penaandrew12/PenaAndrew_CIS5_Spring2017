@@ -39,14 +39,16 @@ int main(int argc, char** argv) {
     int mxThrw=0,numThrw=0,lmGames=100000000;//Game limiter and Throw statistics
     const int SIZE=13;      //Size of Arrays
     int winLoss[SIZE][COLS]={};      //Initialize the Win Loss Array array
+    int *Ptr;
+    Ptr = *winLoss;
     
     //Initialize variables
     string inName="GameInfo.dat";   //String Name
     char outName[]="GameStats.dat"; //Character Array Name
     in.open(inName.c_str());        //Open the Input file
     out.open(outName);              //Open the Output file
-    while(in>>nGames);//Last value in file becomes the number of games
-    nGames=nGames>lmGames?lmGames:nGames;//Limit games if to high
+    while(in>>nGames);  //Last value in file becomes the number of games
+    nGames=nGames>lmGames?lmGames:nGames; //Limit games if to high
     
     //Play the game the prescribed number of times.
     int beg=time(0);//Time the game play
@@ -68,7 +70,7 @@ int main(int argc, char** argv) {
 }
 
 void crpGame(int winLoss[][COLS],int SIZE,int &nGames,int &numThrw,int &mxThrw){
-   
+    
     for(int game=1;game<=nGames;game++){ 
     //Throw dice and sum, keep track of number of throws in a game
         int gmThrw=1;
@@ -79,7 +81,7 @@ void crpGame(int winLoss[][COLS],int SIZE,int &nGames,int &numThrw,int &mxThrw){
             case 11:winLoss[sum1][0]++;break;
             case  2:
             case  3:
-            case 12:winLoss[sum1][1]++;break;
+            case 12:*((winLoss+sum1++)+1);break;     //Is this correct    <-----
             default:{
                 //Loop until a 7 or previous sum is thrown
                 bool thrwAgn=true;
