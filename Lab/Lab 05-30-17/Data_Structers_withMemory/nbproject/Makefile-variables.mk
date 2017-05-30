@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=data_structers
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/data_structers
+CND_ARTIFACT_NAME_Debug=data_structers_withmemory
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/data_structers_withmemory
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=datastructers.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/datastructers.tar
+CND_PACKAGE_NAME_Debug=datastructerswithmemory.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/datastructerswithmemory.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=data_structers
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/data_structers
+CND_ARTIFACT_NAME_Release=data_structers_withmemory
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/data_structers_withmemory
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=datastructers.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/datastructers.tar
+CND_PACKAGE_NAME_Release=datastructerswithmemory.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/datastructerswithmemory.tar
 #
 # include compiler specific variables
 #

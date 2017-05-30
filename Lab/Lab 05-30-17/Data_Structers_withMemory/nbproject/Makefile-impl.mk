@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Data_Structers
+PROJECTNAME=Data_Structers_withMemory
 
 # Active Configuration
 DEFAULTCONF=Debug
