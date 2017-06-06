@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andrew Pena
  * Created on June 2, 2017, 1:04 AM
- * Purpose: Version 3 of Dr. Nim Game
+ * Purpose: Version 3 of Dr. Nimm Game
  */
 
 //System Libraries
@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     char choice;
     
     //Menu Information
-    cout<<"This is the Menu for the game Dr. Nim"<<endl;
+    cout<<"This is the Menu for the game Dr. Nimm"<<endl;
     
     //Show menu and loop
     do{
@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
                 //Display for Programs, States Rules, and allows user to have a winnable chance.  
                 cout<<"Please Enter Name = ";
                 cin>>Name;
-                cout<<endl<<"Welcome "<<Name<<". You get to play Dr. NIM!"<<endl; 
+                cout<<endl<<"Welcome "<<Name<<". You get to play Dr. Nimm!"<<endl; 
                 cout<<"The Objective of this game is to try to take the last Marble."<<endl;
                 cout<<"The Rules are simple. The Computer will go first and it will choose One, Two, or Three Marbles."<<endl;
                 cout<<"After it decides how many to take, it will be your turn. You get to choose from One, Two, or Three Marbles."<<endl;
